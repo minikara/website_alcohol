@@ -26,31 +26,94 @@
 			</header>
 
 			<form method="post" action="result.php">
-				<p>
-					Are you ?
-					<br />
-					<input type="radio" name="gender" value="women"id="women" required/> <label for="women">A women</label><br />
-					<input type="radio" name="gender" value="men" id="men" /> <label for="men">A men</label><br />
-				</p>
-				<p>
-					In a typically week, how many times do you drink ? <br />
-					<ul>
-						<li> <label for="pint"> A pint : </label> <input type="number" name="pint" value="0" min="0" max="50" class="quantity"/><label for="pint"> times </label> </li>
+				<div class="form-group">
+				<legend>Are you ?</legend>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="gender" id="women" value="women">
+						<label class="form-check-label" for="women">A woman</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="gender" id="men" value="men">
+						<label class="form-check-label" for="men">A man</label>
+					</div>
+				</div>
+				<div class="form-group">
+					<legend>In a typically week, how many times do you drink ?</legend>
+					<div class="row">
+						<div class="form-group col-2">	
+						<label for="pint"> A pint : </label>
+						<div class="input-group">
+							<input class="form-control" type="number" name="pint" value="0" min="0" max="50" class="quantity"/>
+							<div class="input-group-append">
+    							<span class="input-group-text">times</span>
+  							</div>
+						</div>
+						</div>
 						
-						<li> <label for="wine"> A glass of wine : </label> <input type="number" name="wine" value="0" min="0" max="50" class="quantity"/><label for="wine"> times </label> </li>
+						<div class="form-group col-2">
+						<label for="wine"> A glass of wine : </label>
+						<div class="input-group">
+							<input class="form-control" type="number" name="wine" value="0" min="0" max="50" class="quantity"/>
+							<div class="input-group-append">
+    							<span class="input-group-text">times</span>
+  							</div>
+						</div>
+						</div>
 						
-						<li> <label for="Galcolpop"> A glass of alcolpop : </label> <input type="number" name="Galcolpop" value="0" min="0" max="50" class="quantity"/> <label for="Galcolpop"> times </label> </li>
+						<div class="form-group col-2">
+						<label for="Galcolpop"> A glass of alcolpop : </label>
+						<div class="input-group">
+							<input class="form-control" type="number" name="Galcolpop" value="0" min="0" max="50" class="quantity"/>
+							<div class="input-group-append">
+    							<span class="input-group-text">times</span>
+  							</div>
+						</div>
+						</div>
 						
-						<li> <label for="Balcolpop"> A bottle of alcolpop : </label> <input type="number" name="Balcolpop" value="0" min="0" max="50" class="quantity"/> <label for="Balcolpop"> times </label> </li>
-
-						<li> <label for="sparWine"> A glass of sparkling wine : </label> <input type="number" name="sparWine" value="0" min="0" max="50" class="quantity"/> <label for="sparWine"> times </label> </li>
-
-						<li> <label for="spirit"> A pub measure of spirits : </label> <input type="number" name="spirit" value="0" min="0" max="50" class="quantity"/> <label for="spirit"> times </label> </li>
-
-						<li> <label for="shot"> A shot : </label> <input type="number" name="shot" value="0" class="quantity" min="0" max="50" /> <label for="shot"> times </label> </li>
-					</ul>
-
-				</p>
+						<div class="form-group col-2">
+						<label for="Balcolpop"> A bottle of alcolpop : </label>
+						<div class="input-group">
+							<input class="form-control" type="number" name="Balcolpop" value="0" min="0" max="50" class="quantity"/>
+							<div class="input-group-append">
+    							<span class="input-group-text">times</span>
+  							</div>
+						</div>
+						</div>
+					</div>
+					<div class="row">
+						
+						<div class="form-group col-2">
+						<label for="sparWine"> A glass of sparkling wine : </label>
+						<div class="input-group">
+							<input class="form-control" type="number" name="sparWine" value="0" min="0" max="50" class="quantity"/>
+							<div class="input-group-append">
+    							<span class="input-group-text">times</span>
+  							</div>
+						</div>
+						</div>
+						
+						<div class="form-group col-2">
+						<label for="spirit"> A pub measure of spirits : </label>
+						<div class="input-group">
+							<input class="form-control" type="number" name="spirit" value="0" min="0" max="50" class="quantity"/>
+							<div class="input-group-append">
+    							<span class="input-group-text">times</span>
+  							</div>
+						</div>
+						</div>
+						
+						<div class="form-group col-2">
+						<label for="shot"> A shot : </label>
+						<div class="input-group">
+							<input class="form-control" type="number" name="shot" value="0" class="quantity" min="0" max="50" />
+							<div class="input-group-append">
+    							<span class="input-group-text">times</span>
+  							</div>
+						</div>
+						</div>
+					</div>
+				</div>
+					
 
 				<p>
 					If you drink at least one time per week, how many days per week do you drink alcohol? (if you drink less than once a week just let 0) ? <br />
