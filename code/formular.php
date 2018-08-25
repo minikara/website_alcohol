@@ -6,6 +6,8 @@
 
         <meta charset="utf-8" />
 
+		<!-- Bootstrap CSS must be linked before all other css -->
+		<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="style.css" />
 
         <title>How do you drink?</title>
@@ -85,5 +87,12 @@
 			</p>
 		</form>
 
+
+		<!-- Javascript zone -->
+
+		<!-- Bootstrap js dependency -->
+		<script src="lib/jquery-3.3.1.slim.min.js"></script>
+		<script src="lib/bootstrap/js/popper.min.js"></script>
+		<script src="lib/bootstrap/js/bootstrap.min.js"></script>
 	</body>
 </html>
