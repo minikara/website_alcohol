@@ -3,7 +3,7 @@ $womenRecommendation = 11;
 $menRecommendation = 17 ;
 function CalculUnit ($pint, $wine, $Galcolpop, $Balcolpop, $sparkling_wine, $spirit, $shot) 
 {
-	$totalUnit = $pint * 2 + $shot + $spirit + $sparkling_wine + $wine + $Balcolpop *2 + 0.5 * $Galcolpop ;
+	$totalUnit = $pint * 2 + $shot + $spirit + $sparkling_wine + $wine + $Balcolpop * 2 + 0.5 * $Galcolpop ;
 	return $totalUnit; 
 }
 function Recommendation ($gender, $women, $men)

@@ -1,24 +1,18 @@
+
+
 <?php
 
+include ("config.php");
 
-function EstimationMoneySpend ($pint, $wine, $glassOfAlcolpop, $bottleOfAlcopop, $sparklingWine, $spirit, $shot)
+function EstimationMoneySpend ($pint, $wine, $glassOfAlcolpop, $bottleOfAlcopop, $sparklingWine, $spirit, $shot, $pricePint, $priceGlassOfWine, $priceGlassOfSparklingWine, $priceBottleOfAlcopop, $priceGlassOfAlcopop, $priceGlassOfSpirit, $priceShot)
 {
-    $pricePint = 5;
-    $priceGlassOfWine = 4;
-    $priceGlassOfSparklingWine = 4;
-    $priceBottleOfAlcopop = 4;
-    $priceGlassOfAlcopop = 2.5;
-    $priceGlassOfSpirit = 6;
-    $priceShot = 2.5;
     return $pint * $pricePint + $wine * $priceGlassOfWine + $glassOfAlcolpop * $priceGlassOfAlcopop + $bottleOfAlcopop * $priceBottleOfAlcopop + $sparklingWine * $priceGlassOfSparklingWine + $spirit * $priceGlassOfSpirit + $shot * $priceShot ; 
 }
 
-$estimationMoneySpend = EstimationMoneySpend ($_POST['pint'], $_POST['wine'], $_POST['Galcolpop'], $_POST['Balcolpop'], $_POST['sparWine'], $_POST['spirit'], $_POST['shot']);
+$estimationMoneySpend = EstimationMoneySpend ($_POST['pint'], $_POST['wine'], $_POST['Galcolpop'], $_POST['Balcolpop'], $_POST['sparWine'], $_POST['spirit'], $_POST['shot'], $pricePint, $priceGlassOfWine, $priceGlassOfSparklingWine, $priceBottleOfAlcopop, $priceGlassOfAlcopop, $priceGlassOfSpirit, $priceShot);
 
 $twiceLessMoneySpend = $estimationMoneySpend / 2;
-$clothesPrice = 20;
-$europePlan = 200;
-$wordPlan = 600;
+
 
 // Money save per week/mounth/year
 
