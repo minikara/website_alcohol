@@ -2,18 +2,7 @@
 
 <html>
 
-    <head>
-
-        <meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
-		<!-- Bootstrap CSS must be linked before all other css -->
-		<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="style.css" />
-
-        <title>How do you drink?</title>
-
-	</head>
+    <?php include ("header.php"); ?>
 
 	<body>
 		<!-- Bootstrap container to give margins -->
@@ -182,14 +171,7 @@
 
 		</div>
 
-
-		<!-- Javascript zone -->
-
-		<!-- Bootstrap js dependency -->
-		<script src="lib/jquery-3.3.1.slim.min.js"></script>
-		<script src="lib/bootstrap/js/popper.min.js"></script>
-		<script src="lib/bootstrap/js/bootstrap.min.js"></script>
-
-		<script src="script.js"></script>
+	<?php include ("footer.php"); ?>
+	
 	</body>
 </html>

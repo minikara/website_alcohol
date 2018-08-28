@@ -14,15 +14,7 @@
 
 <html>
 
-    <head>
-    	<!-- Head of the page -->
-
-        <meta charset="utf-8" />
-        <link rel="stylesheet" href="style.css" />
-
-        <title>Titre</title>
-
-    </head>
+    <?php include ("header.php"); ?>
 
     <body>
 
@@ -119,6 +111,8 @@
         
         
     </section>
+
+    <?php include ("footer.php"); ?>
     	
     </body>
 
