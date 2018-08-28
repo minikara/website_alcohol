@@ -5,10 +5,10 @@
     <head>
 
         <meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
 		<!-- Bootstrap CSS must be linked before all other css -->
-		<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css" />
         <link rel="stylesheet" href="style.css" />
 
         <title>How do you drink?</title>
@@ -38,7 +38,7 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<legend>In a typically week, how many times do you drink ?</legend>
+					<legend>In a typically week, how many times do you drink?</legend>
 					<div class="row">
 						<div class="form-group col-2">	
 						<label for="pint"> A pint : </label>
