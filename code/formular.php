@@ -40,7 +40,7 @@
 				<div class="form-group">
 					<legend>In a typically week, how many times do you drink?</legend>
 					<div class="row">
-						<div class="form-group col-2">	
+						<div class="form-group col-lg-2">	
 						<label for="pint"> A pint : </label>
 						<div class="input-group">
 							<input class="form-control" type="number" name="pint" value="0" min="0" max="50" class="quantity"/>
@@ -50,7 +50,7 @@
 						</div>
 						</div>
 						
-						<div class="form-group col-2">
+						<div class="form-group col-lg-2">
 						<label for="wine"> A glass of wine : </label>
 						<div class="input-group">
 							<input class="form-control" type="number" name="wine" value="0" min="0" max="50" class="quantity"/>
@@ -60,7 +60,7 @@
 						</div>
 						</div>
 						
-						<div class="form-group col-2">
+						<div class="form-group col-lg-2">
 						<label for="Galcolpop"> A glass of alcolpop : </label>
 						<div class="input-group">
 							<input class="form-control" type="number" name="Galcolpop" value="0" min="0" max="50" class="quantity"/>
@@ -70,7 +70,7 @@
 						</div>
 						</div>
 						
-						<div class="form-group col-2">
+						<div class="form-group col-lg-2">
 						<label for="Balcolpop"> A bottle of alcolpop : </label>
 						<div class="input-group">
 							<input class="form-control" type="number" name="Balcolpop" value="0" min="0" max="50" class="quantity"/>
@@ -82,7 +82,7 @@
 					</div>
 					<div class="row">
 						
-						<div class="form-group col-2">
+						<div class="form-group col-lg-2">
 						<label for="sparWine"> A glass of sparkling wine : </label>
 						<div class="input-group">
 							<input class="form-control" type="number" name="sparWine" value="0" min="0" max="50" class="quantity"/>
@@ -92,7 +92,7 @@
 						</div>
 						</div>
 						
-						<div class="form-group col-2">
+						<div class="form-group col-lg-2">
 						<label for="spirit"> A pub measure of spirits : </label>
 						<div class="input-group">
 							<input class="form-control" type="number" name="spirit" value="0" min="0" max="50" class="quantity"/>
@@ -102,7 +102,7 @@
 						</div>
 						</div>
 						
-						<div class="form-group col-2">
+						<div class="form-group col-lg-2">
 						<label for="shot"> A shot : </label>
 						<div class="input-group">
 							<input class="form-control" type="number" name="shot" value="0" class="quantity" min="0" max="50" />
@@ -112,44 +112,71 @@
 						</div>
 						</div>
 					</div>
+					<button type="button" class="btn btn-outline-primary" data-container="body" data-toggle="popover" data-placement="right"
+					data-html="true"
+					data-title="Drinks comparison"
+					data-content="<img class='img-fluid' src='../comparaison.JPG'></img>"
+					>Click here to compare sizes of drinks</button>
 				</div>
 					
+				<div class="form-group">
+					<legend>If you drink at least one time per week, how many days per week do you drink alcohol? (if you drink less than once a week just let 0)?</legend>
+					<div class="input-group">
+						<input type="number" name="times" value="0" class="quantity form-control" min="0" max="7">
+						<div class="input-group-append">
+							<span class="input-group-text">times per week</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<legend>On the same occasion, what is the maximum of drink that you can take?</legend>
+					<div class="input-group">
+						<input type="number" name="max" value="0" class="quantity form-control" min="0" max="30">
+						<div class="input-group-append">
+							<span class="input-group-text">drinks</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group">
+				<legend>Have you already been arrest because of your consomation of alcohol?</legend>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="arrest" id="arrest-yes" value="yes" required>
+						<label class="form-check-label" for="arrest-yes">yes</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="arrest" id="arrest-no" value="no">
+						<label class="form-check-label" for="arrest-no">no</label>
+					</div>
+				</div>
+
+				<div class="form-group">
+				<legend>Have you already had several blackouts?</legend>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="blackout" id="blackout-yes" value="yes" required>
+						<label class="form-check-label" for="blackout-yes">yes</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="blackout" id="blackout-no" value="no">
+						<label class="form-check-label" for="blackout-no">no</label>
+					</div>
+				</div>
+
+				<div class="form-group">
+				<legend>Has a friend, or any health professional ever been concerned about your drinking and advise you to decrease it?</legend>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="advise" id="advise-yes" value="yes" required>
+						<label class="form-check-label" for="advise-yes">yes</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="advise" id="advise-no" value="no">
+						<label class="form-check-label" for="advise-no">no</label>
+					</div>
+				</div>
 
 				<p>
-					If you drink at least one time per week, how many days per week do you drink alcohol? (if you drink less than once a week just let 0) ? <br />
-						
-						<label for="times"><input type="number" name="times" value="0" class="quantity" min="0" max="7" /> times per week </label> <br />
-
-				</p>
-				
-				<p>
-					On the same occasion, what is the maximum of drink that you can take? <br />
-					<label for="max"><input type="number" name="max" value="0" class="quantity" min="0" max="30"/> drinks </label> <br />
-				</p>
-
-				<p>
-					Have you already been arrest because of your consomation of alcohol? <br />
-
-					<input type="radio" name="arrest" value="yes" id="yes" required/> <label for="yes">yes</label><br />
-					<input type="radio" name="arrest" value="no" id="no" /> <label for="no">no</label><br />
-
-				</p>
-
-				<p>
-					Have you already had several blackouts? <br />
-					<input type="radio" name="blackout" value="yes" id="yes" required /> <label for="yes">yes</label><br />
-					<input type="radio" name="blackout" value="no" id="no" /> <label for="no">no</label><br />
-				</p>
-
-				<p>
-					Has a friend, or any health professional ever been concerned about your drinking and advise you to decrease it? <br />
-
-					<input type="radio" name="advise" value="yes" id="yes" required /> <label for="yes">yes</label><br />
-					<input type="radio" name="advise" value="no" id="no" /> <label for="no">no</label><br />
-				</p>
-
-				<p>
-					<input type="submit" value="Submit" id="submit">
+					<input class="btn btn-primary" type="submit" value="Submit" id="submit">
 				</p>
 			</form>
 
@@ -162,5 +189,7 @@
 		<script src="lib/jquery-3.3.1.slim.min.js"></script>
 		<script src="lib/bootstrap/js/popper.min.js"></script>
 		<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+
+		<script src="script.js"></script>
 	</body>
 </html>
