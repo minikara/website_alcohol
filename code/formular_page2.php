@@ -10,7 +10,7 @@
 
 			<header>
 				<h1>
-					How do you drink?
+					Just few questions...
 				</h1>
 			</header>
 
@@ -18,14 +18,15 @@
 				<div class="form-group">
 				<legend>Are you ?</legend>
 					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio" name="gender" id="women" value="women" required>
+						<input class="form-check-input" type="radio" name="gend" id="women" value="w" required>
 						<label class="form-check-label" for="women">A woman</label>
 					</div>
 					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio" name="gender" id="men" value="men">
+						<input class="form-check-input" type="radio" name="gend" id="men" value="m">
 						<label class="form-check-label" for="men">A man</label>
 					</div>
 				</div>
+				<?php /*
 				<div class="form-group">
 					<legend>In a typically week, how many times do you drink?</legend>
 					<div class="row">
@@ -129,7 +130,7 @@
 				</div>
 
 				<div class="form-group">
-				<legend>Has a friend ever been concerned about your drinking and advise you to decrease it?</legend>
+				<legend>Have you already been arrest because of your consomation of alcohol?</legend>
 					<div class="form-check form-check-inline">
 						<input class="form-check-input" type="radio" name="arrest" id="arrest-yes" value="yes" required>
 						<label class="form-check-label" for="arrest-yes">yes</label>
@@ -141,7 +142,7 @@
 				</div>
 
 				<div class="form-group">
-				<legend>Do you have more than one blackout per year?</legend>
+				<legend>Have you already had several blackouts?</legend>
 					<div class="form-check form-check-inline">
 						<input class="form-check-input" type="radio" name="blackout" id="blackout-yes" value="yes" required>
 						<label class="form-check-label" for="blackout-yes">yes</label>
@@ -153,7 +154,7 @@
 				</div>
 
 				<div class="form-group">
-				<legend>Have you already been arrest because of your consomation of alcohol?</legend>
+				<legend>Has a friend, or any health professional ever been concerned about your drinking and advise you to decrease it?</legend>
 					<div class="form-check form-check-inline">
 						<input class="form-check-input" type="radio" name="advise" id="advise-yes" value="yes" required>
 						<label class="form-check-label" for="advise-yes">yes</label>
@@ -162,7 +163,9 @@
 						<input class="form-check-input" type="radio" name="advise" id="advise-no" value="no">
 						<label class="form-check-label" for="advise-no">no</label>
 					</div>
-				</div>
+				</div> 
+
+				*/ ?>
 
 				<p>
 					<input class="btn btn-primary" type="submit" value="Submit" id="submit">

@@ -12,8 +12,8 @@
  
  // price of comparaison things
 
-    $clothesPrice = 20;
-	$europePlan = 200;
-	$wordPlan = 600;
+    $clothesPrice = 40;
+	$europePlan = 300;
+	$wordPlan = 900;
 
 ?>
