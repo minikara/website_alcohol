@@ -18,7 +18,7 @@
 				<div class="form-group">
 				<legend>Are you ?</legend>
 					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio" name="gender" id="women" value="women">
+						<input class="form-check-input" type="radio" name="gender" id="women" value="women" required>
 						<label class="form-check-label" for="women">A woman</label>
 					</div>
 					<div class="form-check form-check-inline">

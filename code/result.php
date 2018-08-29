@@ -32,11 +32,11 @@
                 <tbody>
                     <tr>
                         <td>You consume <strong><?php echo  $quantityConssum ?> units</strong> of alcohol per week on average.</td>
-                        <td>The recommendations for you are <strong><?php echo $recommendation ?>  units</strong> per week. </td>
+                        <td>The recommendations for you are to drink a maximum of <strong><?php echo $recommendation ?>  units</strong> per week. </td>
                     </tr>
                     <tr>
-                        <td>You drink on average <strong><?php echo $_POST['times'] ?> times</strong> a week </td>
-                        <td>The recommendations are not to drink more than <strong><?php echo $maximumDaysOfAlcohol ?> days</strong> a week  </td>
+                        <td>You drink on average <strong><?php echo $_POST['times'] ?> days</strong> a week </td>
+                        <td>The recommendations are to not drink more than <strong><?php echo $maximumDaysOfAlcohol ?> days</strong> a week  </td>
                     </tr>
                     <tr>
                         <td> You can drink up to <strong><?php echo $_POST['max'] ?> </strong> times per occasion. </td>

@@ -21,7 +21,7 @@ function PotentialProblems ($arrest, $blackout, $advise)
     if ($arrest == "yes" OR $blackout == "yes" OR $advise == "yes")
         return "You have already had <strong>several blackouts </strong>, or have been <strong>arrested</strong> for drinking or a friend or health professional has already <strong>commented</strong> on your drinking.";
     else
-        return "You have never had multiple blackouts, or arrested for your drinking or a friend or health professional has never commented on your drinking.";
+        return "You have <strong>never had multiple blackouts</strong>, or <strong>arrested</strong> for your drinking or a friend or health professional has <strong>never commented</strong> on your drinking.";
 }
 
 
