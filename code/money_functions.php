@@ -4,6 +4,7 @@
 
 include ("config.php");
 
+
 function EstimationMoneySpend ($pint, $wine, $glassOfAlcolpop, $bottleOfAlcopop, $sparklingWine, $spirit, $shot, $pricePint, $priceGlassOfWine, $priceGlassOfSparklingWine, $priceBottleOfAlcopop, $priceGlassOfAlcopop, $priceGlassOfSpirit, $priceShot)
 {
     return $pint * $pricePint + $wine * $priceGlassOfWine + $glassOfAlcolpop * $priceGlassOfAlcopop + $bottleOfAlcopop * $priceBottleOfAlcopop + $sparklingWine * $priceGlassOfSparklingWine + $spirit * $priceGlassOfSpirit + $shot * $priceShot ; 
@@ -15,11 +16,6 @@ $twiceLessMoneySpend = $estimationMoneySpend / 2;
 
 
 // Money save per week/mounth/year
-
-function SpendPerWeek ($amounthPerWeek)
-{
-	return $amounthPerWeek;
-}
 
 function SpendPerMonth ($amounthPerWeek)
 {
@@ -33,42 +29,65 @@ function SpendPerYear ($amounthPerWeek)
 
 // money spend per week/month/year
 
-$spendPerWeek = SpendPerWeek ($estimationMoneySpend);
 $spendPerMonth = SpendPerMonth ($estimationMoneySpend);
 $spendPerYear = SpendPerYear ($estimationMoneySpend);  
 
-// money save per week/month/year if the person consum twice less alcohol per week
 
-$savePerWeek = SpendPerWeek ($twiceLessMoneySpend);
-$savePerMonth = SpendPerMonth($twiceLessMoneySpend);
-$savePerYear = SpendPerYear($twiceLessMoneySpend);
+function AverageCostOfUnits ( $estimationMoneySpend, $quantityConssum){
+	if ($quantityConssum > 0){
+		return ($estimationMoneySpend / $quantityConssum);
+	}
+	else
+		return 0;
+}
 
-// money save per week/month/year in terms of clothes, plan in europ and plan in the word if the person consum twice less alcohol per week 
 
-function MoneySave ($amounthPerWeek, $amouthPerMonth, $amouthPerYear, $clothesPrice, $europePlan, $wordPlan)
+
+function SaveIfReduceToRecommandation ($average, $unitsToRecommandationts){
+
+	return ($average * $unitsToRecommandationts);
+
+}
+
+  $unitsAveragePrice = AverageCostOfUnits ($estimationMoneySpend, $quantityConssum) ;
+  $moneySaveIfRecommandation_week = SaveIfReduceToRecommandation ($unitsAveragePrice, $unitsToRecommandation);
+  $moneySaveIfRecommandation = array ('week' => $moneySaveIfRecommandation_week, 'month' => ($moneySaveIfRecommandation_week * 4.3333), 'year' => ($moneySaveIfRecommandation_week * 52));
+
+
+// money save per week/month/year in terms of clothes, plan in europ and plan in the word if the person consum reduce his consumption to 0 or if in reduce his to the recommandation quantity
+
+function MoneySave ($amouthPerMonth, $amouthPerYear, $moneySaveIfRecommandation, $clothesPrice, $europePlan, $wordPlan)
 {
-	$clothesPerWeek = (int) ($amounthPerWeek / $clothesPrice);
-	$clothesPerMonth = (int) ($amouthPerMonth / $clothesPrice);
-	$clothesPerYear = (int) ($amouthPerYear / $clothesPrice);
+	$clothesPerMonth_0 = (int) ($amouthPerMonth / $clothesPrice);
+	$clothesPerYear_0 = (int) ($amouthPerYear / $clothesPrice);
+	$clothesPerMonth_rec = (int) ($moneySaveIfRecommandation['month'] / $clothesPrice);
+	$clothesPerYear_rec = (int) ($moneySaveIfRecommandation['year'] / $clothesPrice);
 
-	$europePerWeek = (int) ($amounthPerWeek / $europePlan);
-	$europePerMonth = (int) ($amouthPerMonth / $europePlan);
-	$europePerYear = (int) ($amouthPerYear / $europePlan);
+	$europePerMonth_0 = (int) ($amouthPerMonth / $europePlan);
+	$europePerYear_0 = (int) ($amouthPerYear / $europePlan);
+	$europePerMonth_rec = (int) ($moneySaveIfRecommandation['month'] / $europePlan);
+	$europePerYear_rec = (int) ($moneySaveIfRecommandation['year'] / $europePlan);
 
-	$wordPerWeek = (int) ($amounthPerWeek / $wordPlan);
-	$wordPerMonth = (int) ($amouthPerMonth / $wordPlan);
-	$wordPerYear = (int) ($amouthPerYear / $wordPlan);
+	$wordPerMonth_0 = (int) ($amouthPerMonth / $wordPlan);
+	$wordPerYear_0 = (int) ($amouthPerYear / $wordPlan);
+	$wordPerMonth_rec = (int) ($moneySaveIfRecommandation['month'] / $wordPlan);
+	$wordPerYear_rec = (int) ($moneySaveIfRecommandation['year'] / $wordPlan);
 
-	return array( 
-		'clothes' => array ('week' => $clothesPerWeek , 'month' => $clothesPerMonth, 'year' => $clothesPerYear ),
-		'europePlan' => array ('week' => $europePerWeek , 'month' => $europePerMonth, 'year' => $europePerYear),
-		'wordPlan' => array ('week' => $wordPerWeek, 'month' => $wordPerMonth, 'year' => $wordPerYear));
+	return array('to_0' =>  array(
+		'clothes' => array ('month' => $clothesPerMonth_0, 'year' => $clothesPerYear_0 ),
+		'europePlan' => array ('month' => $europePerMonth_0, 'year' => $europePerYear_0),
+		'wordPlan' => array ('month' => $wordPerMonth_0, 'year' => $wordPerYear_0)),
+		'to_rec' => array(
+		'clothes' => array ('month' => $clothesPerMonth_rec, 'year' => $clothesPerYear_rec),
+		'europePlan' => array ('month' => $europePerMonth_rec, 'year' => $europePerYear_rec),
+		'wordPlan' => array ('month' => $wordPerMonth_rec, 'year' => $wordPerYear_rec)
+		));
 
 }
 
 // array in 2 dimensions of the money which could be save in terms of cloth/ plan in europe / plan in the word per week/month/year
 
-$quantitySave = MoneySave($savePerWeek, $savePerMonth, $savePerYear, $clothesPrice, $europePlan, $wordPlan);
+$quantitySave = MoneySave($spendPerMonth, $spendPerYear, $moneySaveIfRecommandation, $clothesPrice, $europePlan, $wordPlan);
 
 
 function AtLeastOne ($quantity)
@@ -81,6 +100,7 @@ function AtLeastOne ($quantity)
 		return "No correct quantity";
 
 }
-  
+
+
 
 ?>

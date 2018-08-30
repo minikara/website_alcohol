@@ -60,27 +60,7 @@
 
               if ($quantityConssum > 0 AND $quantityConssum <= $recommendation)
             {
-                 echo '<table class="table table-striped table-bordered">
-                <caption>Money spend</caption>
-                <thead>
-                    <tr class="table-info">
-                        <th>If you reduce your consumtion to 0 .</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>';
-                    include ("reduce_quantity_to_0_month.php");
-                    echo '</td>
-                    </tr>
-                    <tr>
-                        <td>';
-                         include ("reduce_quantity_to_0_year.php");
-                    echo '</td>
-                    </tr>
-            </tbody>
-            </table>';
-                
+                include ("reduce_quantity_to_0.php");
             }   
             elseif ($quantityConssum > 0 AND $quantityConssum > $recommendation) {
                 echo '<table class="table table-striped table-bordered">

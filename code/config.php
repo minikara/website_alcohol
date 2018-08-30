@@ -15,5 +15,6 @@
     $clothesPrice = 40;
 	$europePlan = 300;
 	$wordPlan = 900;
+	$goodlunch = 10;
 
 ?>
