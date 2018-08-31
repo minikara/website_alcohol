@@ -1,3 +1,15 @@
+<!DOCTYPE html>
+
+<html>
+
+    <?php include ("header.php"); ?>
+    <!-- Verification of the Data -->
+
+<?php include ("verification.php") ?>;
+
+<?php if ($autorisation == true){ ?>
+
+
 <!-- Function about the form -->
 
 <?php include ("form_functions.php"); ?>
@@ -7,69 +19,91 @@
 
 <?php include ("money_functions.php"); ?>
 
-<?php 
-    
-?>
-<!DOCTYPE html>
 
-<html>
 
-    <?php include ("header.php"); ?>
 
     <body>
 
-    <div class="container">
+	    <div class="container">
 
-        <section>
-            <table class="table table-striped table-bordered">
-                <caption>Results</caption>
-                <thead>
-                    <tr class="table-info">
-                        <th>Your results</th>
-                        <th>The recommandations</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>You consume <strong><?php echo  $quantityConssum ?> units</strong> of alcohol per week on average.</td>
-                        <td>The recommendations for you are to drink a maximum of <strong><?php echo $recommendation ?>  units</strong> per week. </td>
-                    </tr>
-                    <tr>
-                        <td>You drink on average <strong><?php echo $_POST['times'] ?> days</strong> a week </td>
-                        <td>The recommendations are to not drink more than <strong><?php echo $maximumDaysOfAlcohol ?> days</strong> a week  </td>
-                    </tr>
-                    <tr>
-                        <td> You can drink up to <strong><?php echo $_POST['max'] ?> units</strong> per occasion. </td>
-                        <td> The recommendations are to not drink more than <strong> <?php echo $maximumPerSession ?> units </strong> per occasion.
-                    </tr>
-                    <tr>
-                        <td> <?php echo $potentialproblems ?> </td>
-                        <td> <?php echo $lastQuestionsRecommendations ?> </td>
+	        <section>
+	            <table class="table table-striped table-bordered">
+	                <caption>Results</caption>
+	                <thead>
+	                    <tr class="table-info">
+	                        <th>Your results</th>
+	                        <th>The recommandations</th>
+	                    </tr>
+	                </thead>
+	                <tbody>
+	                    <tr>
+	                        <td>You consume <strong><?php echo  $quantityConssum ?> units</strong> of alcohol per week on average.</td>
+	                        <td>The recommendations for you are to drink a maximum of <strong><?php echo $recommendation ?>  units</strong> per week. </td>
+	                    </tr>
+	                    <tr>
+	                        <td>You drink on average <strong><?php echo $_POST['times'] ?> days</strong> a week </td>
+	                        <td>The recommendations are to not drink more than <strong><?php echo $maximumDaysOfAlcohol ?> days</strong> a week  </td>
+	                    </tr>
+	                    <tr>
+	                        <td> You can drink up to <strong><?php echo $_POST['max'] ?> units</strong> per occasion. </td>
+	                        <td> The recommendations are to not drink more than <strong> <?php echo $maximumPerSession ?> units </strong> per occasion.
+	                    </tr>
+	                    <tr>
+	                        <td> <?php echo $potentialproblems ?> </td>
+	                        <td> <?php echo $lastQuestionsRecommendations ?> </td>
 
-                </tbody>
-            </table>
-            
-        </section>
-        <section>
-        	<div class = "text-center">
-	            <h2>The cost</h2>
-	            <p>
-	                Curently, you spend € <?php echo (int)$spendPerMonth ?> per month in alcohol, that is to say € <?php echo (int)$spendPerYear ?> per year.
-	            </p>
-	        </div>
-            
-            <?php
+	                </tbody>
+	            </table>
+	            
+	        </section>
+	        <section>
+	        	<div class = "text-center">
+		            <h2>The cost</h2>
+		            <p>
+		                Curently, you spend € <?php echo (int)$spendPerMonth ?> per month in alcohol, that is to say € <?php echo (int)$spendPerYear ?> per year.
+		            </p>
+		        </div>
+	            
+	            <?php
 
-              if ($quantityConssum > 0 AND $quantityConssum <= $recommendation)
-            { ?>
-            	<div class = "row">
-            	<div class = "col-sm-3"></div>
-            	<div class = "col-sm-6">
+	              if ($quantityConssum > 0 AND $quantityConssum <= $recommendation)
+	            { ?>
+	            	<div class = "row">
+	            	<div class = "col-sm-3"></div>
+	            	<div class = "col-sm-6">
+		                <table class="table table-striped table-bordered">
+		                <caption>Money spend</caption>
+		                <thead>
+		                    <tr class="table-info">
+		                        <th>If you reduce your consumtion to 0 .</th>
+		                    </tr>
+		                </thead>
+		                <tbody>
+		                    <tr>
+		                        <td>
+		                    	<?php include ("reduce_quantity_to_0_month.php"); ?>
+		                    	</td>
+		                    </tr>
+		                    <tr>
+		                        <td>
+		                         <?php include ("reduce_quantity_to_0_year.php"); ?>
+		                    	</td>
+		                    </tr>
+			            </tbody>
+			            </table>
+			        </div>
+			    </div>
+
+	           	<?php     
+	            }   
+	            elseif ($quantityConssum > 0 AND $quantityConssum > $recommendation) { ?>
+	                
 	                <table class="table table-striped table-bordered">
 	                <caption>Money spend</caption>
 	                <thead>
 	                    <tr class="table-info">
 	                        <th>If you reduce your consumtion to 0 .</th>
+	                        <th>If you reduce your consumption to the recommendations .</th>
 	                    </tr>
 	                </thead>
 	                <tbody>
@@ -77,64 +111,40 @@
 	                        <td>
 	                    	<?php include ("reduce_quantity_to_0_month.php"); ?>
 	                    	</td>
+	                        <td>
+	                        <?php include ("reduce_quantity_to_recommandation_month.php"); ?>
+	                    	</td>
 	                    </tr>
 	                    <tr>
 	                        <td>
-	                         <?php include ("reduce_quantity_to_0_year.php"); ?>
+	                   		<?php include ("reduce_quantity_to_0_year.php"); ?>
+	                    	</td>
+	                        <td>
+	                        <?php include ("reduce_quantity_to_recommandation_year.php"); ?>
 	                    	</td>
 	                    </tr>
-		            </tbody>
-		            </table>
-		        </div>
-		    </div>
 
-           	<?php     
-            }   
-            elseif ($quantityConssum > 0 AND $quantityConssum > $recommendation) { ?>
-                
-                <table class="table table-striped table-bordered">
-                <caption>Money spend</caption>
-                <thead>
-                    <tr class="table-info">
-                        <th>If you reduce your consumtion to 0 .</th>
-                        <th>If you reduce your consumption to the recommendations .</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                    	<?php include ("reduce_quantity_to_0_month.php"); ?>
-                    	</td>
-                        <td>
-                        <?php include ("reduce_quantity_to_recommandation_month.php"); ?>
-                    	</td>
-                    </tr>
-                    <tr>
-                        <td>
-                   		<?php include ("reduce_quantity_to_0_year.php"); ?>
-                    	</td>
-                        <td>
-                        <?php include ("reduce_quantity_to_recommandation_year.php"); ?>
-                    	</td>
-                    </tr>
+	                </tbody>
+	            </table>
 
-                </tbody>
-            </table>
+	            <?php    
+	            }
 
-            <?php    
-            }
+	            else  {?>
+	                <p id ='almost nothing'>
+	                Your alcohol cunsumption is nul. <strong>Congratulation : You save a lot of money! </strong>   
+	                </p>             
+	           <?php } ?>
+	        </section>
 
-            else  {?>
-                <p id ='almost nothing'>
-                Your alcohol cunsumption is nul. <strong>Congratulation : You save a lot of money! </strong>   
-                </p>             
-           <?php } ?>
-        </section>
-
-    </div>
-    <?php include ("footer.php"); ?>
+	    </div>
+	    <?php include ("footer.php"); ?>
         
+   
+
     </body>
 
 
 </html>
+
+ <?php } ?>
