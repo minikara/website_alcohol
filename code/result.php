@@ -51,39 +51,48 @@
             
         </section>
         <section>
-            <h2>The cost</h2>
-            <p>
-                Curently, you spend € <?php echo (int)$spendPerMonth ?> per month in alcohol, that is to say € <?php echo (int)$spendPerYear ?> per year.
-            </p>
+        	<div class = "text-center">
+	            <h2>The cost</h2>
+	            <p>
+	                Curently, you spend € <?php echo (int)$spendPerMonth ?> per month in alcohol, that is to say € <?php echo (int)$spendPerYear ?> per year.
+	            </p>
+	        </div>
             
             <?php
 
               if ($quantityConssum > 0 AND $quantityConssum <= $recommendation)
-            {
-                 echo '<table class="table table-striped table-bordered">
-                <caption>Money spend</caption>
-                <thead>
-                    <tr class="table-info">
-                        <th>If you reduce your consumtion to 0 .</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>';
-                    include ("reduce_quantity_to_0_month.php");
-                    echo '</td>
-                    </tr>
-                    <tr>
-                        <td>';
-                         include ("reduce_quantity_to_0_year.php");
-                    echo '</td>
-                    </tr>
-            </tbody>
-            </table>';
-                
+            { ?>
+            	<div class = "row">
+            	<div class = "col-sm-3"></div>
+            	<div class = "col-sm-6">
+	                <table class="table table-striped table-bordered">
+	                <caption>Money spend</caption>
+	                <thead>
+	                    <tr class="table-info">
+	                        <th>If you reduce your consumtion to 0 .</th>
+	                    </tr>
+	                </thead>
+	                <tbody>
+	                    <tr>
+	                        <td>
+	                    	<?php include ("reduce_quantity_to_0_month.php"); ?>
+	                    	</td>
+	                    </tr>
+	                    <tr>
+	                        <td>
+	                         <?php include ("reduce_quantity_to_0_year.php"); ?>
+	                    	</td>
+	                    </tr>
+		            </tbody>
+		            </table>
+		        </div>
+		    </div>
+
+           	<?php     
             }   
-            elseif ($quantityConssum > 0 AND $quantityConssum > $recommendation) {
-                echo '<table class="table table-striped table-bordered">
+            elseif ($quantityConssum > 0 AND $quantityConssum > $recommendation) { ?>
+                
+                <table class="table table-striped table-bordered">
                 <caption>Money spend</caption>
                 <thead>
                     <tr class="table-info">
@@ -93,35 +102,33 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>';
-                    include ("reduce_quantity_to_0_month.php");
-                    echo '</td>
-                        <td>';
-                         include ("reduce_quantity_to_recommandation_month.php");
-                    echo '</td>
+                        <td>
+                    	<?php include ("reduce_quantity_to_0_month.php"); ?>
+                    	</td>
+                        <td>
+                        <?php include ("reduce_quantity_to_recommandation_month.php"); ?>
+                    	</td>
                     </tr>
                     <tr>
-                        <td>';
-                    include ("reduce_quantity_to_0_year.php");
-                    echo '</td>
-                        <td>';
-                         include ("reduce_quantity_to_recommandation_year.php");
-                    echo '</td>
+                        <td>
+                   		<?php include ("reduce_quantity_to_0_year.php"); ?>
+                    	</td>
+                        <td>
+                        <?php include ("reduce_quantity_to_recommandation_year.php"); ?>
+                    	</td>
                     </tr>
 
                 </tbody>
-            </table>';
-                
+            </table>
+
+            <?php    
             }
 
-            else 
-                echo 
-                        ('<div id =\'almost nothing\'>
-                        Your alcohol cunsumption is nul. <strong>Congratulation : You save a lot of money! </strong>   
-                        </div>');             
-            ?>
-            
-            
+            else  {?>
+                <p id ='almost nothing'>
+                Your alcohol cunsumption is nul. <strong>Congratulation : You save a lot of money! </strong>   
+                </p>             
+           <?php } ?>
         </section>
 
     </div>
