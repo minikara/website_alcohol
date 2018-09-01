@@ -10,9 +10,9 @@ function CalculUnit ($pint, $wine, $Galcolpop, $Balcolpop, $sparkling_wine, $spi
 
 function Recommendation ($gender, $women, $men)
 {
-	if ($gender == "women")
+	if ($gender == "woman")
 	return $women;
-elseif ($gender == "men")
+elseif ($gender == "man")
 	return $men;
 else
 	return 'No gender';

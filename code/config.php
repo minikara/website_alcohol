@@ -9,6 +9,13 @@
     $priceGlassOfAlcopop = 2.5;
     $priceGlassOfSpirit = 6;
     $priceShot = 2.5;
+
+// max/min consumption of alcohol
+    
+    $mincons = 0;
+    $maxcons = 50;
+    $maxOcasion = 30;
+
  
  // price of comparaison things
 
@@ -16,5 +23,9 @@
 	$europePlan = 300;
 	$wordPlan = 900;
 	$goodlunch = 10;
+
+// verification
+
+    $port = "http://localhost:16443/alcohol_website/code/formular.php";
 
 ?>
