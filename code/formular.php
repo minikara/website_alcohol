@@ -132,12 +132,12 @@
 				<div class="form-group">
 				<legend>Has a friend ever been concerned about your drinking and advise you to decrease it?</legend>
 					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio" name="advise" id="arrest-yes" value="yes" required>
-						<label class="form-check-label" for="arrest-yes">yes</label>
+						<input class="form-check-input" type="radio" name="advise" id="advise-yes" value="yes" required>
+						<label class="form-check-label" for="advise-yes">yes</label>
 					</div>
 					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio" name="arrest" id="arrest-no" value="no">
-						<label class="form-check-label" for="arrest-no">no</label>
+						<input class="form-check-input" type="radio" name="advise" id="advise-no" value="no">
+						<label class="form-check-label" for="advise-no">no</label>
 					</div>
 				</div>
 
@@ -153,15 +153,47 @@
 					</div>
 				</div>
 
+				<div style="display: none" class="blackout-number-question form-group">
+					<legend>How many blackouts?</legend>
+					<div class="input-group">
+						<input type="number" name="blackout-number" value="0" class="quantity form-control" min=1 max=50 >
+						<div class="input-group-append">
+							<span class="input-group-text">blackouts</span>
+						</div>
+					</div>
+				</div>
+
 				<div class="form-group">
 				<legend>Have you already been arrest because of your consomation of alcohol?</legend>
 					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio" name="arrest" id="advise-yes" value="yes" required>
-						<label class="form-check-label" for="advise-yes">yes</label>
+						<input class="form-check-input" type="radio" name="arrest" id="arrest-yes" value="yes" required>
+						<label class="form-check-label" for="arrest-yes">yes</label>
 					</div>
 					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio" name="advise" id="advise-no" value="no">
-						<label class="form-check-label" for="advise-no">no</label>
+						<input class="form-check-input" type="radio" name="arrest" id="arrest-no" value="no">
+						<label class="form-check-label" for="arrest-no">no</label>
+					</div>
+				</div>
+
+				<div style="display: none" class="arrest-number-question form-group">
+					<legend>How many arrests?</legend>
+					<div class="input-group">
+						<input type="number" name="arrest-number" value="0" class="quantity form-control" min=1 max=50 >
+						<div class="input-group-append">
+							<span class="input-group-text">arrests</span>
+						</div>
+					</div>
+				</div>
+
+				<div style="display: none" class="concerned-question form-group">
+				<legend>Are you concerned by your consomation of alcohol?</legend>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="concern" id="concern-yes" value="yes" required>
+						<label class="form-check-label" for="concern-yes">yes</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="concern" id="concern-no" value="no">
+						<label class="form-check-label" for="concern-no">no</label>
 					</div>
 				</div>
 
@@ -173,6 +205,39 @@
 		</div>
 
 	<?php include ("footer.php"); ?>
+	
+	<script>
+	function checkRadios() {
+		var blackout = $('#blackout-yes').is(':checked');
+		var arrest = $('#arrest-yes').is(":checked");
+		
+		if (blackout) {
+			$('.blackout-number-question').show();
+		}
+		else {
+			$('.blackout-number-question').hide();
+		}
+
+		if (arrest) {
+			$('.arrest-number-question').show();
+		}
+		else {
+			$('.arrest-number-question').hide();
+		}
+
+		if (arrest || blackout) {
+			$('.concerned-question').show();
+		}
+		else {
+			$('.concerned-question').hide();
+		}
+	}
+
+	$(document).ready(function() {
+		checkRadios();
+		$( "input[type=radio]" ).on( "click", checkRadios);
+	});
+	</script>
 	
 	</body>
 </html>
