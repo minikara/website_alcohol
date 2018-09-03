@@ -60,7 +60,7 @@
 	        	<div class = "text-center">
 		            <h2>The cost</h2>
 		            <p>
-		                Curently, you spend € <?php echo (int)$spendPerMonth ?> per month in alcohol, that is to say € <?php echo (int)$spendPerYear ?> per year.
+		                Curently, you spend <span class= "cost"><strong>€ <?php echo (int)$spendPerMonth ?> per month</strong></span> in alcohol, that is to say <span class= "cost"><strong>€ <?php echo (int)$spendPerYear ?> per year</strong></span>.
 		            </p>
 		        </div>
 	            
@@ -131,7 +131,7 @@
 	            }
 
 	            else  {?>
-	                <p id ='almost nothing'>
+	                <p class= "text-center">
 	                Your alcohol cunsumption is nul. <strong>Congratulation : You save a lot of money! </strong>   
 	                </p>             
 	           <?php } ?>

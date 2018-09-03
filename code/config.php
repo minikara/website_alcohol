@@ -26,6 +26,6 @@
 
 // verification
 
-    $port = "http://localhost:16443/alcohol_website/code/formular.php";
+    $port = "http://localhost/alcohol_website/code/formular.php";
 
 ?>

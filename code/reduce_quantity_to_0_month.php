@@ -1,6 +1,6 @@
 
 <p>
-    Per month you could save € <?php echo (int)$spendPerMonth ?> .
+    <strong>Per month</strong> you could save € <?php echo (int)$spendPerMonth ?> .
 </p>
 
 <p>

@@ -1,7 +1,7 @@
 
 <p>
 
-Per year you could save € <?php echo (int)$spendPerYear ?> .
+<strong>Per year</strong> you could save € <?php echo (int)$spendPerYear ?> .
 
 </p>
 
@@ -13,12 +13,12 @@ Per year you could save € <?php echo (int)$spendPerYear ?> .
 
 		if (AtLeastOne ($quantitySave['to_0']['europePlan']['year']) == true){ ?>
 
-			<li><strong> <?php echo $quantitySave['to_0']['europePlan']['year'] ?> return flight </strong>.</li>
+			<li><strong> <?php echo $quantitySave['to_0']['europePlan']['year'] ?> returns flights </strong>that you could buy for an European country.</li>
 		<?php };
 
 		if (AtLeastOne ($quantitySave['to_0']['wordPlan']['year']) == true){ ?>
         
-			<li> <strong> <?php echo $quantitySave['to_0']['wordPlan']['year'] ?> return flight </strong> that you could buy for Bali, or the US !</li>
+			<li> <strong><span class = "cost"> <?php echo $quantitySave['to_0']['wordPlan']['year'] ?> returns flights </strong></span> that you could buy for <strong><span class= "cost">Bali</span></strong>, or <strong><span class = "cost">the US</span></strong> !</li>
 
 		<?php } ?>
 
