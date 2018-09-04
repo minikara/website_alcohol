@@ -156,7 +156,7 @@
 				<div style="display: none" class="blackout-number-question form-group">
 					<legend>How many blackouts?</legend>
 					<div class="input-group">
-						<input type="number" name="blackout-number" value="0" class="quantity form-control" min=1 max=50 >
+						<input type="number" name="blackout-number" value="0" class="quantity form-control" min=1 max=50 required>
 						<div class="input-group-append">
 							<span class="input-group-text">blackouts</span>
 						</div>
@@ -178,7 +178,7 @@
 				<div style="display: none" class="arrest-number-question form-group">
 					<legend>How many arrests?</legend>
 					<div class="input-group">
-						<input type="number" name="arrest-number" value="0" class="quantity form-control" min=1 max=50 >
+						<input type="number" name="arrest-number" value="0" class="quantity form-control" min=1 max=50 required>
 						<div class="input-group-append">
 							<span class="input-group-text">arrests</span>
 						</div>
@@ -213,23 +213,29 @@
 		
 		if (blackout) {
 			$('.blackout-number-question').show();
+			$('[name="blackout-number"]').prop('disabled', false);
 		}
 		else {
 			$('.blackout-number-question').hide();
+			$('[name="blackout-number"]').prop('disabled', true);
 		}
 
 		if (arrest) {
 			$('.arrest-number-question').show();
+			$('[name="arrest-number"]').prop('disabled', false);
 		}
 		else {
 			$('.arrest-number-question').hide();
+			$('[name="arrest-number"]').prop('disabled', true);
 		}
 
 		if (arrest || blackout) {
 			$('.concerned-question').show();
+			$('[name="concern"]').prop('disabled', false);
 		}
 		else {
 			$('.concerned-question').hide();
+			$('[name="concern"]').prop('disabled', true);
 		}
 	}
 
