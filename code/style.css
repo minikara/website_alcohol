@@ -7,3 +7,8 @@ body{
  	font-size : large;
  	color: #4000FF;
  }
+
+ #link {
+ 	border: 3px DodgerBlue solid;
+ 	width: 200px;
+ }

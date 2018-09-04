@@ -18,12 +18,30 @@ else
 	return 'No gender';
 }
 
-function PotentialProblems ($arrest, $blackout, $advise)
+function Concern ($arrest, $blackout){
+	if ($arrest == "yes" OR $blackout == "yes")
+		return $_POST['concern'];
+	else 
+		return "no";
+}
+
+$concern = Concern ($_POST['arrest'], $_POST['blackout']);
+
+function PotentialProblems ($arrest, $blackout, $advise, $concern)
 {
-    if ($arrest == "yes" OR $blackout == "yes" OR $advise == "yes")
-        return "You have already had <strong>several blackouts </strong>, or have been <strong>arrested</strong> for drinking or a friend or health professional has already <strong>commented</strong> on your drinking.";
-    else
-        return "You have <strong>never had multiple blackouts</strong>, or <strong>arrested</strong> for your drinking or a friend or health professional has <strong>never commented</strong> on your drinking.";
+	if ($advise == "yes")
+		echo "A friend have already advise you to <strong>decrease your alcohol consumption</strong>. ";
+        
+    if ($blackout == "yes")
+    	echo "You have suffer from <strong>" . $_POST['blackout-number'] . " blackouts</strong> this year. ";
+    if ($arrest == "yes")
+    	echo "You have already <strong>been arrest " . $_POST['arrest-number'] . "  times</strong> because of your alcohol consumption. ";
+    if ($concern == "yes") 
+    	echo "<strong>You are worried about your drinking</strong>";
+    if ($advise == "no" AND $blackout == "no" AND $arrest == "no") 
+    	echo "You do not <strong>seem</strong> to have any dangerous behavior towards alcohol.";
+
+
 }
 
 function DifferenceToRecommendation ($quantityConssum, $Recommendation){
@@ -36,7 +54,6 @@ $recommendation = Recommendation ($_POST['gender'], $womenRecommendation, $menRe
 $quantityConssum = CalculUnit ($_POST['pint'], $_POST['wine'], $_POST['Galcolpop'], $_POST['Balcolpop'], $_POST['sparWine'], $_POST['spirit'], $_POST['shot']);
 $maximumDaysOfAlcohol = "4 to 5";
 $maximumPerSession = 6;
-$potentialproblems = PotentialProblems ($_POST['arrest'], $_POST['blackout'], $_POST['advise']);
 $lastQuestionsRecommendations = "If you have already had <strong>several blackouts</strong>, <strong>been arrested</strong> because of alcohol, or if a friend or health professional has already <strong>expressed concern</strong> about your drinking, then you may need to talk about your relationship with alcohol.";
 $unitsToRecommandation = DifferenceToRecommendation ($quantityConssum, $recommendation);
 

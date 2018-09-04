@@ -18,7 +18,7 @@
        
        It is :
        <ul>
-            <li> approximatly at least <strong><?php echo $quantitySave['to_rec']['clothes']['month']?> clothes</strong> that you could buy in addition per month.</li>
+            <li> Approximately at least <strong><?php echo $quantitySave['to_rec']['clothes']['month']?> clothes</strong> that you could buy in addition per month.</li>
             <?php
 
             if (AtLeastOne ($quantitySave['to_rec']['europePlan']['month']) == true){ ?>

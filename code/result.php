@@ -5,7 +5,7 @@
     <?php include ("header.php"); ?>
     <!-- Verification of the Data -->
 
-<?php include ("verification.php") ?>;
+<?php include ("verification.php"); ?>
 
 <?php if ($autorisation == true){ ?>
 
@@ -28,11 +28,11 @@
 
 	        <section>
 	            <table class="table table-striped table-bordered">
-	                <caption>Results</caption>
+	                <caption>Results</caption> 
 	                <thead>
 	                    <tr class="table-info">
 	                        <th>Your results</th>
-	                        <th>The recommandations</th>
+	                        <th>The recommendations</th>
 	                    </tr>
 	                </thead>
 	                <tbody>
@@ -49,18 +49,26 @@
 	                        <td> The recommendations are to not drink more than <strong> <?php echo $maximumPerSession ?> units </strong> per occasion.
 	                    </tr>
 	                    <tr>
-	                        <td> <?php echo $potentialproblems ?> </td>
+	                        <td> <?php PotentialProblems ($_POST['arrest'], $_POST['blackout'], $_POST['advise'], $concern) ?> </td>
 	                        <td> <?php echo $lastQuestionsRecommendations ?> </td>
 
 	                </tbody>
 	            </table>
+					
+	            <div id='link'>For more informations do not hesitate to<a href='http://alcoholireland.ie/alcohol-and-you/guidelines/' target='_blank'> Click here </a></div>
 	            
 	        </section>
 	        <section>
 	        	<div class = "text-center">
 		            <h2>The cost</h2>
 		            <p>
-		                Curently, you spend <span class= "cost"><strong>€ <?php echo (int)$spendPerMonth ?> per month</strong></span> in alcohol, that is to say <span class= "cost"><strong>€ <?php echo (int)$spendPerYear ?> per year</strong></span>.
+		                Currently, you spend <span class= "cost"><strong>€ <?php echo (int)$spendPerMonth ?> per month</strong></span> in alcohol, that is to say <span class= "cost"><strong>€ <?php echo (int)$spendPerYear ?> per year</strong></span>.
+
+		                <button type="button" class="btn btn-outline-primary" data-container="body" data-toggle="popover" data-placement="right"
+					data-html="true"
+					data-title="Prices Estimation"
+					data-content="<?php echo $prices ?>"
+					>Click here to see with whitch prices we made our estimate</button>
 		            </p>
 		        </div>
 	            
@@ -72,10 +80,14 @@
 	            	<div class = "col-sm-3"></div>
 	            	<div class = "col-sm-6">
 		                <table class="table table-striped table-bordered">
-		                <caption>Money spend</caption>
+		                <caption>Money spend <button type="button" class="btn btn-outline-primary" data-container="body" data-toggle="popover" data-placement="right"
+					data-html="true"
+					data-title="Prices Estimation"
+					data-content="<?php echo $comparaisonPrices ?>"
+					>Click here to see what is the prices of the different things</button></caption>
 		                <thead>
 		                    <tr class="table-info">
-		                        <th>If you reduce your consumtion to 0 .</th>
+		                        <th>If you reduce your consumption to 0 .</th>
 		                    </tr>
 		                </thead>
 		                <tbody>
@@ -99,7 +111,11 @@
 	            elseif ($quantityConssum > 0 AND $quantityConssum > $recommendation) { ?>
 	                
 	                <table class="table table-striped table-bordered">
-	                <caption>Money spend</caption>
+	                <caption>Money spend  <button type="button" class="btn btn-outline-primary" data-container="body" data-toggle="popover" data-placement="right"
+					data-html="true"
+					data-title="Prices Estimation"
+					data-content="<?php echo $comparaisonPrices ?>"
+					>Click here to see what is the prices of the different things</button></caption>
 	                <thead>
 	                    <tr class="table-info">
 	                        <th>If you reduce your consumtion to 0 .</th>
@@ -126,6 +142,7 @@
 
 	                </tbody>
 	            </table>
+	            
 
 	            <?php    
 	            }

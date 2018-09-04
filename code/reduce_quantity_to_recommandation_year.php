@@ -7,7 +7,7 @@
 <p>
     It is:
     <ul>
-        <li> approximatly at least <strong> <?php echo $quantitySave['to_rec']['clothes']['year'] ?> clothes</strong> </li>
+        <li> Approximately at least <strong> <?php echo $quantitySave['to_rec']['clothes']['year'] ?> clothes</strong> </li>
         <?php
 
         if (AtLeastOne ($quantitySave['to_rec']['europePlan']['year']) == true){ ?>
