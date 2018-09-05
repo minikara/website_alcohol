@@ -55,7 +55,9 @@
 	                </tbody>
 	            </table>
 					
-	            <div id='link'>For more informations do not hesitate to<a href='http://alcoholireland.ie/alcohol-and-you/guidelines/' target='_blank'> Click here </a></div>
+	            <div id='link'><a href='http://alcoholireland.ie/alcohol-and-you/guidelines/' target='_blank'> <button type="button" class="btn btn-outline-primary" data-container="body" data-toggle="popover" data-placement="right"
+					data-html="true"
+					>For more informations do not hesitate to  Click here</button></a></div>
 	            
 	        </section>
 	        <section>
