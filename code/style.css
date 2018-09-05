@@ -1,4 +1,4 @@
-body{
+body {
      background-color: #EFFBFB;
    }
 
@@ -6,4 +6,15 @@ body{
 
  	font-size : large;
  	color: #4000FF;
+ 	font-weight: bold;
  }
+
+strong {
+
+	font-weight: bold;
+}
+
+section {
+
+	margin-bottom: 1em;
+}

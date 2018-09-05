@@ -124,7 +124,7 @@
 					<div class="input-group">
 						<input type="number" name="max" value="0" class="quantity form-control" min=<?php echo $mincons ?> max=<?php echo $maxOcasion ?> >
 						<div class="input-group-append">
-							<span class="input-group-text">drinks</span>
+							<span class="input-group-text">units</span>
 						</div>
 					</div>
 				</div>

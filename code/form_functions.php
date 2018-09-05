@@ -37,9 +37,9 @@ function PotentialProblems ($arrest, $blackout, $advise, $concern)
     if ($arrest == "yes")
     	echo "You have already <strong>been arrest " . $_POST['arrest-number'] . "  times</strong> because of your alcohol consumption. ";
     if ($concern == "yes") 
-    	echo "<strong>You are worried about your drinking</strong>";
+    	echo "<strong>You are worried about your drinking.</strong> If you desire some help <strong>do not hesitate</strong> to contact one of the staff member of the university. Some of them that can <strong>help you</strong> <a href='https://ulsites.ul.ie/studentaffairs/student-health-centre-staff-medical-team' target='_blank'>here </a> or write at <a href='mailto: Ria.Toland@ul.ie' target='_blank'>this email</a>.";
     if ($advise == "no" AND $blackout == "no" AND $arrest == "no") 
-    	echo "You do not <strong>seem</strong> to have any dangerous behavior towards alcohol.";
+    	echo "You don't <strong>seem</strong> to have any dangerous behavior towards alcohol.";
 
 
 }
