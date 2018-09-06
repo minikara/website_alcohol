@@ -1,10 +1,17 @@
 <!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
-<html>
+        <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <?php include ("header.php"); ?>
-    <?php include ("config.php"); ?>
+		<!-- Bootstrap CSS must be linked before all other css -->
+		<link rel="stylesheet" href="How%20do%20you%20drink%3F_fichiers/bootstrap.css">
+        <link rel="stylesheet" href="How%20do%20you%20drink%3F_fichiers/style.css">
 
+        <title>How do you drink?</title>
+
+</head>    
 	<body>
 		<!-- Bootstrap container to give margins -->
 		<div class="container">
@@ -19,21 +26,21 @@
 				<div class="form-group">
 				<legend>Are you ?</legend>
 					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio" name="gender" id="women" value="woman" required>
+						<input class="form-check-input" name="gender" id="women" value="woman" required="" type="radio">
 						<label class="form-check-label" for="women">A woman</label>
 					</div>
 					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio" name="gender" id="men" value="man">
+						<input class="form-check-input" name="gender" id="men" value="man" checked="checked" type="radio">
 						<label class="form-check-label" for="men">A man</label>
 					</div>
 				</div>
 				<div class="form-group">
-					<legend>In a typical week, how many times do you drink?</legend>
+					<legend>In a typically week, how many times do you drink?</legend>
 					<div class="row">
 						<div class="form-group col-lg-2">	
 						<label for="pint"> A pint : </label>
 						<div class="input-group">
-							<input class="form-control" type="number" name="pint" value="0" min=<?php echo $mincons ?> max=<?php echo $maxcons ?> class="quantity"/>
+							<input class="form-control" name="pint" value="0" min="0" max="50" type="number">
 							<div class="input-group-append">
     							<span class="input-group-text">times</span>
   							</div>
@@ -43,7 +50,7 @@
 						<div class="form-group col-lg-2">
 						<label for="wine"> A glass of wine : </label>
 						<div class="input-group">
-							<input class="form-control" type="number" name="wine" value="0" min=<?php echo $mincons ?> max=<?php echo $maxcons ?> class="quantity"/>
+							<input class="form-control" name="wine" value="0" min="0" max="50" type="number">
 							<div class="input-group-append">
     							<span class="input-group-text">times</span>
   							</div>
@@ -53,7 +60,7 @@
 						<div class="form-group col-lg-2">
 						<label for="Galcolpop"> A glass of alcolpop : </label>
 						<div class="input-group">
-							<input class="form-control" type="number" name="Galcolpop" value="0" min=<?php echo $mincons ?> max=<?php echo $maxcons ?> class="quantity"/>
+							<input class="form-control" name="Galcolpop" value="0" min="0" max="50" type="number">
 							<div class="input-group-append">
     							<span class="input-group-text">times</span>
   							</div>
@@ -63,7 +70,7 @@
 						<div class="form-group col-lg-2">
 						<label for="Balcolpop"> A bottle of alcolpop : </label>
 						<div class="input-group">
-							<input class="form-control" type="number" name="Balcolpop" value="0" min=<?php echo $mincons ?> max=<?php echo $maxcons ?> class="quantity"/>
+							<input class="form-control" name="Balcolpop" value="0" min="0" max="50" type="number">
 							<div class="input-group-append">
     							<span class="input-group-text">times</span>
   							</div>
@@ -75,7 +82,7 @@
 						<div class="form-group col-lg-2">
 						<label for="sparWine"> A glass of sparkling wine : </label>
 						<div class="input-group">
-							<input class="form-control" type="number" name="sparWine" value="0" min=<?php echo $mincons ?> max=<?php echo $maxcons ?> class="quantity"/>
+							<input class="form-control" name="sparWine" value="0" min="0" max="50" type="number">
 							<div class="input-group-append">
     							<span class="input-group-text">times</span>
   							</div>
@@ -85,7 +92,7 @@
 						<div class="form-group col-lg-2">
 						<label for="spirit"> A pub measure of spirits : </label>
 						<div class="input-group">
-							<input class="form-control" type="number" name="spirit" value="0" min=<?php echo $mincons ?> max=<?php echo $maxcons ?> class="quantity"/>
+							<input class="form-control" name="spirit" value="0" min="0" max="50" type="number">
 							<div class="input-group-append">
     							<span class="input-group-text">times</span>
   							</div>
@@ -95,24 +102,22 @@
 						<div class="form-group col-lg-2">
 						<label for="shot"> A shot : </label>
 						<div class="input-group">
-							<input class="form-control" type="number" name="shot" value="0" class="quantity" min=<?php echo $mincons ?> max=<?php echo $maxcons ?> />
+							<input class="form-control" name="shot" value="0" min="0" max="50" type="number">
 							<div class="input-group-append">
     							<span class="input-group-text">times</span>
   							</div>
 						</div>
 						</div>
 					</div>
-					<button type="button" class="btn btn-outline-primary" data-container="body" data-toggle="popover" data-placement="right"
-					data-html="true"
-					data-title="Drinks comparison"
-					data-content="<img class='img-fluid' src='../comparaison.JPG'></img>"
-					>Click here to compare sizes of drinks</button>
+					<button type="button" class="btn btn-outline-primary" data-container="body" data-toggle="popover" data-placement="right" data-html="true" data-title="Drinks comparison" data-content="&lt;img class='img-fluid' src='../comparaison.JPG'&gt;&lt;/img&gt;" data-original-title="" title="">Click here to compare sizes of drinks</button>
 				</div>
 					
 				<div class="form-group">
-					<legend>If you drink at least one time per week, how many days per week do you drink alcohol? (if you drink less than once a week just let 0)?</legend>
+					<legend>If you drink at least one time per week, how many days per 
+week do you drink alcohol? (if you drink less than once a week just let 
+0)?</legend>
 					<div class="input-group">
-						<input type="number" name="times" value="0" class="quantity form-control" min=<?php echo $mincons ?> max="7">
+						<input name="times" value="0" class="quantity form-control" min="0" max="7" type="number">
 						<div class="input-group-append">
 							<span class="input-group-text">times per week</span>
 						</div>
@@ -120,30 +125,26 @@
 				</div>
 
 				<div class="form-group">
-					<legend>On the same occasion, what is the maximum number of units of alcohol that you can drink?</legend>
+					<legend>On the same occasion, what is the maximum of units of alcohol that you can drink?</legend>
 					<div class="input-group">
-						<input type="number" name="max" value="0" class="quantity form-control" min=<?php echo $mincons ?> max=<?php echo $maxOcasion ?> >
+						<input name="max" value="2" class="quantity form-control" min="0" max="30" type="number">
 						<div class="input-group-append">
 							<span class="input-group-text">units</span>
 						</div>
 					</div>
-					<div id= 'unitButton'>
-						<button type="button" class="btn btn-outline-primary" data-container="body" data-toggle="popover" data-placement="right"
-						data-html="true"
-						data-title="1 Unit of Alcohol"
-						data-content="<img id = 'unit' src='../unit.png'></img>"
-						>What is a unit of alcohol?</button>
+					<div id="unitButton">
+						<button type="button" class="btn btn-outline-primary" data-container="body" data-toggle="popover" data-placement="right" data-html="true" data-title="1 Unit of Alcohol" data-content="&lt;img id = 'unit' src='../unit.png'&gt;&lt;/img&gt;" data-original-title="" title="">What is a unit of alcohol?</button>
 					</div>
 				</div>
 
 				<div class="form-group">
-				<legend>Has a friend ever been concerned about your drinking and advised you to decrease it?</legend>
+				<legend>Has a friend ever been concerned about your drinking and advise you to decrease it?</legend>
 					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio" name="advise" id="advise-yes" value="yes" required>
+						<input class="form-check-input" name="advise" id="advise-yes" value="yes" required="" checked="checked" type="radio">
 						<label class="form-check-label" for="advise-yes">yes</label>
 					</div>
 					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio" name="advise" id="advise-no" value="no">
+						<input class="form-check-input" name="advise" id="advise-no" value="no" type="radio">
 						<label class="form-check-label" for="advise-no">no</label>
 					</div>
 				</div>
@@ -151,19 +152,19 @@
 				<div class="form-group">
 				<legend>Do you have more than one blackout per year?</legend>
 					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio" name="blackout" id="blackout-yes" value="yes" required>
+						<input class="form-check-input" name="blackout" id="blackout-yes" value="yes" required="" checked="checked" type="radio">
 						<label class="form-check-label" for="blackout-yes">yes</label>
 					</div>
 					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio" name="blackout" id="blackout-no" value="no">
+						<input class="form-check-input" name="blackout" id="blackout-no" value="no" type="radio">
 						<label class="form-check-label" for="blackout-no">no</label>
 					</div>
 				</div>
 
-				<div style="display: none" class="blackout-number-question form-group">
+				<div style="" class="blackout-number-question form-group">
 					<legend>How many blackouts?</legend>
 					<div class="input-group">
-						<input type="number" name="blackout-number" value="0" class="quantity form-control" min=1 max=50 required>
+						<input name="blackout-number" value="0" class="quantity form-control" min="1" max="50" required="" type="number">
 						<div class="input-group-append">
 							<span class="input-group-text">blackouts</span>
 						</div>
@@ -171,48 +172,55 @@
 				</div>
 
 				<div class="form-group">
-				<legend>Have you already been arrested because of your alcohol consumption?</legend>
+				<legend>Have you already been arrest because of your consomation of alcohol?</legend>
 					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio" name="arrest" id="arrest-yes" value="yes" required>
+						<input class="form-check-input" name="arrest" id="arrest-yes" value="yes" required="" checked="checked" type="radio">
 						<label class="form-check-label" for="arrest-yes">yes</label>
 					</div>
 					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio" name="arrest" id="arrest-no" value="no">
+						<input class="form-check-input" name="arrest" id="arrest-no" value="no" type="radio">
 						<label class="form-check-label" for="arrest-no">no</label>
 					</div>
 				</div>
 
-				<div style="display: none" class="arrest-number-question form-group">
+				<div style="" class="arrest-number-question form-group">
 					<legend>How many arrests?</legend>
 					<div class="input-group">
-						<input type="number" name="arrest-number" value="0" class="quantity form-control" min=1 max=50 required>
+						<input name="arrest-number" value="0" class="quantity form-control" min="1" max="50" required="" type="number">
 						<div class="input-group-append">
 							<span class="input-group-text">arrests</span>
 						</div>
 					</div>
 				</div>
 
-				<div style="display: none" class="concerned-question form-group">
-				<legend>Are you concerned by your alcohol consumption?</legend>
+				<div style="" class="concerned-question form-group">
+				<legend>Are you concerned by your consomation of alcohol?</legend>
 					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio" name="concern" id="concern-yes" value="yes" required>
+						<input class="form-check-input" name="concern" id="concern-yes" value="yes" required="" type="radio">
 						<label class="form-check-label" for="concern-yes">yes</label>
 					</div>
 					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio" name="concern" id="concern-no" value="no">
+						<input class="form-check-input" name="concern" id="concern-no" value="no" type="radio">
 						<label class="form-check-label" for="concern-no">no</label>
 					</div>
 				</div>
 
 				<p>
-					<input class="btn btn-primary" type="submit" value="Submit" id="submit">
+					<input class="btn btn-primary" value="Submit" id="submit" type="submit">
 				</p>
 			</form>
 
 		</div>
 
-	<?php include ("footer.php"); ?>
-	
+	<!-- Javascript zone -->
+
+<!-- Bootstrap js dependency -->
+<script src="How%20do%20you%20drink%3F_fichiers/jquery-3.js"></script>
+<script src="How%20do%20you%20drink%3F_fichiers/popper.js"></script>
+<script src="How%20do%20you%20drink%3F_fichiers/bootstrap.js"></script>
+
+<!-- Personal scripts -->
+<script src="How%20do%20you%20drink%3F_fichiers/script.js"></script>	
 	<script>
 	function checkRadios() {
 		var blackout = $('#blackout-yes').is(':checked');
@@ -252,5 +260,5 @@
 	});
 	</script>
 	
-	</body>
-</html>
+	
+</body></html>
