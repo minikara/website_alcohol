@@ -25,12 +25,12 @@
 
             if (AtLeastOne ($quantitySave['to_0']['europePlan']['month']) == true){ ?>
 
-                <li> <strong><?php echo $quantitySave['to_0']['europePlan']['month'] ?> return flight(s) </strong> that you could buy for an European country.</li>
+                <li> <strong><?php echo $quantitySave['to_0']['europePlan']['month'] ?> return flight(s) </strong> to an European country.</li>
             <?php }
                  
             if (AtLeastOne ($quantitySave['to_0']['wordPlan']['month']) == true){ ?>
 
-                <li><span class = "cost"><?php echo $quantitySave['to_rec']['wordPlan']['month']?> return flight(s) </span> that you could buy for <span class = "cost">Bali</span>, or <span class = "cost" >the US</span> !</li>
+                <li><span class = "cost"><?php echo $quantitySave['to_rec']['wordPlan']['month']?> return flight(s) </span> to <span class = "cost">Bali</span>, or <span class = "cost" >the US</span> !</li>
                  
             <?php } ?>
         
