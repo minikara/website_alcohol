@@ -44,9 +44,15 @@ function PotentialProblems ($arrest, $blackout, $advise, $concern)
 
 }
 
+function DifferenceToRecommendation ($quantityConssum, $Recommendation){
+
+	return ($quantityConssum - $Recommendation);
+}
+
 $recommendation = Recommendation ($_POST['gender'], $womenRecommendation, $menRecommendation);
 $quantityConssum = CalculUnit ($_POST['pint'], $_POST['wine'], $_POST['Galcolpop'], $_POST['Balcolpop'], $_POST['sparWine'], $_POST['spirit'], $_POST['shot']);
-$lastQuestionsRecommendations = "If you have already had <strong>several blackouts</strong>, <strong>been arrested</strong> because of alcohol, or if a friend or health professional has already <strong>expressed concern</strong> about your drinking, then you may need to talk about your relationship with alcohol."
+$lastQuestionsRecommendations = "If you have already had <strong>several blackouts</strong>, <strong>been arrested</strong> because of alcohol, or if a friend or health professional has already <strong>expressed concern</strong> about your drinking, then you may need to talk about your relationship with alcohol.";
+$unitsToRecommandation = DifferenceToRecommendation ($quantityConssum, $recommendation);
 
 
 ?>
