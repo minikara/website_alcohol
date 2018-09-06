@@ -2,10 +2,9 @@ body {
      background-color: #EFFBFB;
    }
 
-.cost {
+.text-primary {
 
- 	font-size : large;
- 	color: #4000FF;
+ 	font-size : 20px;
  	font-weight: bold;
  }
 
@@ -29,4 +28,10 @@ section {
 #unitButton {
 
 	margin-top: 1em;
+}
+
+#link {
+
+	font-weight: bold;
+	color: #0080ff;
 }

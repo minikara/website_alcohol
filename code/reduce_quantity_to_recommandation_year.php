@@ -1,6 +1,6 @@
 <p>
 
-<strong>Per year</strong> you could save <span class = "cost"> € <?php echo (int)$moneySaveIfRecommandation['year'] ?></span> .
+<strong>Per year</strong> you could save <span class = "text-primary"> € <?php echo (int)$moneySaveIfRecommandation['year'] ?></span> .
 
 </p>
 
@@ -17,7 +17,7 @@
 
         if (AtLeastOne ($quantitySave['to_rec']['wordPlan']['year']) == true){ ?>
         
-            <li> <strong><span class = "cost"> <?php echo $quantitySave['to_rec']['wordPlan']['year'] ?> return flight(s)</span></strong> to <strong><span class= "cost">Bali</span></strong>, or <strong><span class = "cost">the US</span></strong> !</li>
+            <li> <strong><span class = "text-primary"> <?php echo $quantitySave['to_rec']['wordPlan']['year'] ?> return flight(s)</span></strong> to <strong><span class= "text-primary">Bali</span></strong>, or <strong><span class = "text-primary">the US</span></strong> !</li>
 
         <?php } ?>
 

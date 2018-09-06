@@ -55,16 +55,14 @@
 	                </tbody>
 	            </table>
 					
-	            <div id='link'><a href='http://www.askaboutalcohol.ie/' target='_blank'> <button type="button" class="btn btn-outline-primary" data-container="body" data-toggle="popover" data-placement="right"
-					data-html="true"
-					>For more informations do not hesitate to click here</button></a></div>
+	            <div id='link'>For more informations do not hesitate to <a href='http://www.askaboutalcohol.ie/' target='_blank'>click here</a></div>
 	            
 	        </section>
 	        <section>
 	        	<div class = "text-center">
 		            <h2>The cost</h2>
 		            <p>
-		                Currently, you spend <span class= "cost">€ <?php echo (int)$spendPerMonth ?> per month</span> in alcohol, that is to say <span class= "cost">€ <?php echo (int)$spendPerYear ?> per year</span>.
+		                Currently, you spend <span class= "text-primary">€ <?php echo (int)$spendPerMonth ?> per month</span> in alcohol, that is to say <span class= "text-primary">€ <?php echo (int)$spendPerYear ?> per year</span>.
 		                <?php if ($spendPerMonth != 0){ ?>
 		                	 <button type="button" class="btn
 		                	btn-outline-primary" data-container="body"

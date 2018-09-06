@@ -59,16 +59,18 @@
   							</div>
 						</div>
 						</div>
-						
+
 						<div class="form-group col-lg-2">
-						<label for="Balcolpop"> A bottle of alcolpop : </label>
+						<label for="shot"> A shot : </label>
 						<div class="input-group">
-							<input class="form-control" type="number" name="Balcolpop" value="0" min=<?php echo $mincons ?> max=<?php echo $maxcons ?> class="quantity"/>
+							<input class="form-control" type="number" name="shot" value="0" class="quantity" min=<?php echo $mincons ?> max=<?php echo $maxcons ?> />
 							<div class="input-group-append">
     							<span class="input-group-text">times</span>
   							</div>
 						</div>
 						</div>
+						
+						
 					</div>
 					<div class="row">
 						
@@ -93,9 +95,9 @@
 						</div>
 						
 						<div class="form-group col-lg-2">
-						<label for="shot"> A shot : </label>
+						<label for="Balcolpop"> A bottle of alcolpop (275ml) : </label>
 						<div class="input-group">
-							<input class="form-control" type="number" name="shot" value="0" class="quantity" min=<?php echo $mincons ?> max=<?php echo $maxcons ?> />
+							<input class="form-control" type="number" name="Balcolpop" value="0" min=<?php echo $mincons ?> max=<?php echo $maxcons ?> class="quantity"/>
 							<div class="input-group-append">
     							<span class="input-group-text">times</span>
   							</div>

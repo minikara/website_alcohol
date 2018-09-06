@@ -1,6 +1,6 @@
 
 <p>
-    <strong>Per month</strong> you could save <span class = "cost" >€ <?php echo (int)$spendPerMonth ?></span> .
+    <strong>Per month</strong> you could save <span class = "text-primary" >€ <?php echo (int)$spendPerMonth ?></span> .
 </p>
 
 <p>
@@ -30,7 +30,7 @@
                  
             if (AtLeastOne ($quantitySave['to_0']['wordPlan']['month']) == true){ ?>
 
-                <li><span class = "cost"><?php echo $quantitySave['to_rec']['wordPlan']['month']?> return flight(s) </span> to <span class = "cost">Bali</span>, or <span class = "cost" >the US</span> !</li>
+                <li><span class = "text-primary"><?php echo $quantitySave['to_rec']['wordPlan']['month']?> return flight(s) </span> to <span class = "text-primary">Bali</span>, or <span class = "text-primary" >the US</span> !</li>
                  
             <?php } ?>
         
