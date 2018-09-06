@@ -101,6 +101,11 @@ function AtLeastOne ($quantity)
 
 }
 
+function DifferenceToRecommendation ($quantityConssum, $Recommendation){
 
+	return ($quantityConssum - $Recommendation);
+}
+
+$unitsToRecommandation = DifferenceToRecommendation ($quantityConssum, $recommendation);
 
 ?>

@@ -13,11 +13,15 @@
     $prices = "Pint : € " . $pricePint . "<br />Glass of wine : € " . $priceGlassOfWine . "<br />Glass of Alcoholpop : € " . $priceGlassOfAlcopop . "<br />Bottle of Alcoholpop : € " . $priceBottleOfAlcopop . "<br />Glass of sparkling wine : € " . $priceGlassOfSparklingWine . "<br />Spirit : € " . $priceGlassOfSpirit ."<br />Shot : € " .$priceShot;
 
 
-// max/min consumption of alcohol
+// consumption of alcohol
     
+    $womenRecommendation = 11;
+    $menRecommendation = 17 ;
     $mincons = 0;
     $maxcons = 50;
     $maxOcasion = 30;
+    $maximumDaysOfAlcohol = "4 to 5";
+    $maximumPerSession = 6;
 
  
  // price of comparaison things
