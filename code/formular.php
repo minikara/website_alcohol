@@ -28,7 +28,7 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<legend>In a typically week, how many times do you drink?</legend>
+					<legend>In a typical week, how many times do you drink?</legend>
 					<div class="row">
 						<div class="form-group col-lg-2">	
 						<label for="pint"> A pint : </label>
@@ -120,7 +120,7 @@
 				</div>
 
 				<div class="form-group">
-					<legend>On the same occasion, what is the maximum of units of alcohol that you can drink?</legend>
+					<legend>On the same occasion, what is the maximum number of units of alcohol that you can drink?</legend>
 					<div class="input-group">
 						<input type="number" name="max" value="0" class="quantity form-control" min=<?php echo $mincons ?> max=<?php echo $maxOcasion ?> >
 						<div class="input-group-append">
@@ -137,7 +137,7 @@
 				</div>
 
 				<div class="form-group">
-				<legend>Has a friend ever been concerned about your drinking and advise you to decrease it?</legend>
+				<legend>Has a friend ever been concerned about your drinking and advised you to decrease it?</legend>
 					<div class="form-check form-check-inline">
 						<input class="form-check-input" type="radio" name="advise" id="advise-yes" value="yes" required>
 						<label class="form-check-label" for="advise-yes">yes</label>
@@ -171,7 +171,7 @@
 				</div>
 
 				<div class="form-group">
-				<legend>Have you already been arrest because of your consomation of alcohol?</legend>
+				<legend>Have you already been arrested because of your alcohol consumption?</legend>
 					<div class="form-check form-check-inline">
 						<input class="form-check-input" type="radio" name="arrest" id="arrest-yes" value="yes" required>
 						<label class="form-check-label" for="arrest-yes">yes</label>
@@ -193,7 +193,7 @@
 				</div>
 
 				<div style="display: none" class="concerned-question form-group">
-				<legend>Are you concerned by your consomation of alcohol?</legend>
+				<legend>Are you concerned by your alcohol consumption?</legend>
 					<div class="form-check form-check-inline">
 						<input class="form-check-input" type="radio" name="concern" id="concern-yes" value="yes" required>
 						<label class="form-check-label" for="concern-yes">yes</label>

@@ -57,7 +57,7 @@
 					
 	            <div id='link'><a href='http://www.askaboutalcohol.ie/' target='_blank'> <button type="button" class="btn btn-outline-primary" data-container="body" data-toggle="popover" data-placement="right"
 					data-html="true"
-					>For more informations do not hesitate to  Click here</button></a></div>
+					>For more informations do not hesitate to click here</button></a></div>
 	            
 	        </section>
 	        <section>
@@ -72,7 +72,7 @@
 							data-html="true"
 							data-title="Prices Estimation"
 							data-content="<?php echo $prices ?>"
-					>Click here to see with whitch prices we made our estimate</button>
+					>Click here to see the prices the estimations are based on</button>
 
 		               <?php } ?>
 		               
@@ -87,11 +87,11 @@
 	            	<div class = "col-sm-3"></div>
 	            	<div class = "col-sm-6">
 		                <table class="table table-striped table-bordered">
-		                <caption>Money spend <button type="button" class="btn btn-outline-primary" data-container="body" data-toggle="popover" data-placement="right"
+		                <caption>Money spendings <button type="button" class="btn btn-outline-primary" data-container="body" data-toggle="popover" data-placement="right"
 					data-html="true"
 					data-title="Prices Estimation"
 					data-content="<?php echo $comparaisonPrices ?>"
-					>Click here to see what is the prices of the different things</button></caption>
+					>Click here to see the prices of the different elements</button></caption>
 		                <thead>
 		                    <tr class="table-info">
 		                        <th>If you reduce your consumption to 0 .</th>
@@ -118,15 +118,15 @@
 	            elseif ($quantityConssum > 0 AND $quantityConssum > $recommendation) { ?>
 	                
 	                <table class="table table-striped table-bordered">
-	                <caption>Money spend  <button type="button" class="btn btn-outline-primary" data-container="body" data-toggle="popover" data-placement="right"
+	                <caption>Money spendings  <button type="button" class="btn btn-outline-primary" data-container="body" data-toggle="popover" data-placement="right"
 					data-html="true"
 					data-title="Prices Estimation"
 					data-content="<?php echo $comparaisonPrices ?>"
-					>Click here to see what is the prices of the different things</button></caption>
+					>Click here to see the prices of the different elements</button></caption>
 	                <thead>
 	                    <tr class="table-info">
-	                        <th>If you reduce your consumtion to 0 .</th>
-	                        <th>If you reduce your consumption to the recommendations .</th>
+	                        <th>If you reduce your consumtion to 0.</th>
+	                        <th>If you reduce your consumption to the recommendations.</th>
 	                    </tr>
 	                </thead>
 	                <tbody>
@@ -156,7 +156,7 @@
 
 	            else  {?>
 	                <p class= "text-center">
-	                Your alcohol cunsumption is nul. <strong>Congratulation : You save a lot of money! </strong>   
+	                Your alcohol cunsumption is null. <strong>Congratulations : You are saving a lot of money! </strong>   
 	                </p>             
 	           <?php } ?>
 	        </section>
