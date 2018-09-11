@@ -4,11 +4,16 @@
 
 include ("config.php");
 
+// estimation of the money spend according to the value in the file config.php
+
 
 function EstimationMoneySpend ($pint, $wine, $glassOfAlcolpop, $bottleOfAlcopop, $sparklingWine, $spirit, $shot, $pricePint, $priceGlassOfWine, $priceGlassOfSparklingWine, $priceBottleOfAlcopop, $priceGlassOfAlcopop, $priceGlassOfSpirit, $priceShot)
 {
     return $pint * $pricePint + $wine * $priceGlassOfWine + $glassOfAlcolpop * $priceGlassOfAlcopop + $bottleOfAlcopop * $priceBottleOfAlcopop + $sparklingWine * $priceGlassOfSparklingWine + $spirit * $priceGlassOfSpirit + $shot * $priceShot ; 
 }
+
+
+// calculation of the estimation of the money spend according to the function EstimationMoneySpend ans the data that the user have enter in the form.
 
 $estimationMoneySpend = EstimationMoneySpend ($_POST['pint'], $_POST['wine'], $_POST['Galcolpop'], $_POST['Balcolpop'], $_POST['sparWine'], $_POST['spirit'], $_POST['shot'], $pricePint, $priceGlassOfWine, $priceGlassOfSparklingWine, $priceBottleOfAlcopop, $priceGlassOfAlcopop, $priceGlassOfSpirit, $priceShot);
 
@@ -32,6 +37,7 @@ function SpendPerYear ($amounthPerWeek)
 $spendPerMonth = SpendPerMonth ($estimationMoneySpend);
 $spendPerYear = SpendPerYear ($estimationMoneySpend);  
 
+// Calulation of the cost of one sigle unit of alcohol consume according to the data send by the user. (for example If the user drink 5 beer the average of one unit will be 2.5, if he drink 1 beer and 1 spirit it will be 11/3 euros)
 
 function AverageCostOfUnits ( $estimationMoneySpend, $quantityConssum){
 	if ($quantityConssum > 0){
@@ -41,6 +47,8 @@ function AverageCostOfUnits ( $estimationMoneySpend, $quantityConssum){
 		return 0;
 }
 
+
+// money save by the user if he reduce his consomation to the recommandation (based on the average of one unit calculate previously)
 
 
 function SaveIfReduceToRecommandation ($average, $unitsToRecommandationts){
