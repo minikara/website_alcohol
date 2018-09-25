@@ -3,7 +3,7 @@
 include ("config.php");
 
 
-$validation = array ('gender' => true, 'consumption' => true, 'times' => true, 'max' => true, 'advise' => true, 'blackout' => true, 'arrest' => true );
+$validation = array ('gender' => true, 'consumption' => true, 'times' => true, 'max' => true, 'concerned' => true, 'blackout' => true, 'arrest' => true );
 
 $verif = true;
 function Gender ($gender, $verif, $port){
@@ -83,12 +83,12 @@ $validation['max'] = MaxPerOcasion ($_POST['max'], $verif, $port, $maxOcasion);
 
 
 $verif = true;
-function FriendAdvise ($advise, $verif, $port){
+function Concerned ($concerned, $verif, $port){
 
-	if ($advise != "yes" AND $advise != "no") { ?>
+	if ($concerned != "yes" AND $concerned != "no") { ?>
 
 		<div class="alert alert-danger">
-  		<strong>ATTENTION!</strong> You didn't well inquire the question about your friend advises <a href="<?php echo ($port) ?>" class="alert-link">go back to the formular</a>.
+  		<strong>ATTENTION!</strong> You didn't well inquire the question about your friend concerneds <a href="<?php echo ($port) ?>" class="alert-link">go back to the formular</a>.
 		</div>
 		<?php
 		$verif = false;
@@ -96,12 +96,12 @@ function FriendAdvise ($advise, $verif, $port){
 	return $verif;
 }
 
-$validation['advise'] = FriendAdvise ($_POST['advise'], $verif, $port);
+$validation['concerned'] = Concerned ($_POST['concerned'], $verif, $port);
 
 $verif = true;
 function Blackout ($blackout, $verif, $port){
 
-	if ($blackout != "yes" AND $blackout != "no") { ?>
+	if ($blackout != "once a semester" AND $blackout != "twice a semester" AND $blackout != "monthly" AND $blackout != "weekly" AND $blackout != "never") { ?>
 
 		<div class="alert alert-danger">
   		<strong>ATTENTION!</strong> You didn't well inquire the question about the blackout <a href="<?php echo ($port) ?>" class="alert-link">go back to the formular</a>.
@@ -129,6 +129,22 @@ function Arrest ($arrest, $verif, $port){
 }
 
 $validation['arrest'] = Arrest ($_POST['arrest'], $verif, $port);
+
+$verif = true;
+function Sex ($sex, $verif, $port){
+
+	if ($sex != "yes" AND $arrest != "no") { ?>
+
+		<div class="alert alert-danger">
+  		<strong>ATTENTION!</strong> You didn't well inquire the question about your possible unprotected sex <a href="<?php echo ($port) ?>" class="alert-link">go back to the formular</a>.
+		</div>
+		<?php
+		$verif = false;
+	}
+	return $verif;
+}
+
+$validation['sex'] = Sex ($_POST['sex'], $verif, $port);
 
 
 

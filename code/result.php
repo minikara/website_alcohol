@@ -49,7 +49,7 @@
 	                        <td> The recommendations are to not drink more than <strong> <?php echo $maximumPerSession ?> units </strong> per occasion.
 	                    </tr>
 	                    <tr>
-	                        <td> <?php PotentialProblems ($_POST['arrest'], $_POST['blackout'], $_POST['advise'], $concern) ?> </td>
+	                        <td> <?php PotentialProblems ($_POST['arrest'], $_POST['blackout'], $_POST['concerned'], $_POST['sex']) ?> </td>
 	                        <td> <?php echo $lastQuestionsRecommendations ?> </td>
 
 	                </tbody>

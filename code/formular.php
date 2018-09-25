@@ -17,18 +17,18 @@
 
 			<form method="post" action="result.php">
 				<div class="form-group">
-				<legend>Are you ?</legend>
+				<legend>Would you like to use the recommended alcohol allowances for males or females ?</legend>
 					<div class="form-check form-check-inline">
 						<input class="form-check-input" type="radio" name="gender" id="women" value="woman" required>
-						<label class="form-check-label" for="women">A woman</label>
+						<label class="form-check-label" for="women">Female</label>
 					</div>
 					<div class="form-check form-check-inline">
 						<input class="form-check-input" type="radio" name="gender" id="men" value="man">
-						<label class="form-check-label" for="men">A man</label>
+						<label class="form-check-label" for="men">Male</label>
 					</div>
 				</div>
 				<div class="form-group">
-					<legend>In a typical week, how many times do you drink?</legend>
+					<legend>On a typical week, how many days would you consume alcohol ?</legend>
 					<div class="row">
 						<div class="form-group col-lg-2">	
 						<label for="pint"> A pint : </label>
@@ -139,38 +139,43 @@
 				</div>
 
 				<div class="form-group">
-				<legend>Has a friend ever been concerned about your drinking and advised you to decrease it?</legend>
+				<legend>Have you, or a friend, ever been concerned about your alcohol consumption ?</legend>
 					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio" name="advise" id="advise-yes" value="yes" required>
-						<label class="form-check-label" for="advise-yes">yes</label>
+						<input class="form-check-input" type="radio" name="concerned" id="concerned-yes" value="yes" required>
+						<label class="form-check-label" for="concerned-yes">yes</label>
 					</div>
 					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio" name="advise" id="advise-no" value="no">
-						<label class="form-check-label" for="advise-no">no</label>
+						<input class="form-check-input" type="radio" name="concerned" id="concerned-no" value="no">
+						<label class="form-check-label" for="concerned-no">no</label>
 					</div>
 				</div>
+
+				<div style="display: none" class="concerned-question form-group">Please, consult <a href=' http://www.askaboutalcohol.ie/your-drinking/worried-about-your-drinking/' target='_blank'>this website </a></div>
 
 				<div class="form-group">
-				<legend>Do you have more than one blackout per year?</legend>
+				<legend>How often do you have a blackout? (loss of memory while drinking) ?</legend>
 					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio" name="blackout" id="blackout-yes" value="yes" required>
-						<label class="form-check-label" for="blackout-yes">yes</label>
+						<input class="form-check-input" type="radio" name="blackout" id="once_semester" value="once a semester" required>
+						<label class="form-check-label" for="once_semester">Once a semester</label>
 					</div>
 					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio" name="blackout" id="blackout-no" value="no">
-						<label class="form-check-label" for="blackout-no">no</label>
+						<input class="form-check-input" type="radio" name="blackout" id="twice_semester" value="twice a semester" required>
+						<label class="form-check-label" for="twice_semester">Twice a semester</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="blackout" id="monthly" value="monthly" required>
+						<label class="form-check-label" for="monthly">Monthly</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="blackout" id="weekly" value="weekly" required>
+						<label class="form-check-label" for="weekly">Weekly</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="blackout" id="never" value="never" required>
+						<label class="form-check-label" for="weekly">Never</label>
 					</div>
 				</div>
 
-				<div style="display: none" class="blackout-number-question form-group">
-					<legend>How many blackouts?</legend>
-					<div class="input-group">
-						<input type="number" name="blackout-number" value="0" class="quantity form-control" min=1 max=50 required>
-						<div class="input-group-append">
-							<span class="input-group-text">blackouts</span>
-						</div>
-					</div>
-				</div>
 
 				<div class="form-group">
 				<legend>Have you already been arrested because of your alcohol consumption?</legend>
@@ -194,17 +199,18 @@
 					</div>
 				</div>
 
-				<div style="display: none" class="concerned-question form-group">
-				<legend>Are you concerned by your alcohol consumption?</legend>
+				<div class="form-group">
+				<legend>Have you ever had unprotected sex after excessive alcohol consumption?</legend>
 					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio" name="concern" id="concern-yes" value="yes" required>
-						<label class="form-check-label" for="concern-yes">yes</label>
+						<input class="form-check-input" type="radio" name="sex" id="sex-yes" value="yes" required>
+						<label class="form-check-label" for="sex-yes">yes</label>
 					</div>
 					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio" name="concern" id="concern-no" value="no">
-						<label class="form-check-label" for="concern-no">no</label>
+						<input class="form-check-input" type="radio" name="sex" id="sex-no" value="no">
+						<label class="form-check-label" for="sex-no">no</label>
 					</div>
 				</div>
+
 
 				<p>
 					<input class="btn btn-primary" type="submit" value="Submit" id="submit">
@@ -217,16 +223,15 @@
 	
 	<script>
 	function checkRadios() {
-		var blackout = $('#blackout-yes').is(':checked');
 		var arrest = $('#arrest-yes').is(":checked");
-		
-		if (blackout) {
-			$('.blackout-number-question').show();
-			$('[name="blackout-number"]').prop('disabled', false);
+		var concerned =$('#concerned-yes').is(":checked");
+
+		if (concerned){
+			$('.concerned-question').show();
+
 		}
 		else {
-			$('.blackout-number-question').hide();
-			$('[name="blackout-number"]').prop('disabled', true);
+			$('.concerned-question').hide();
 		}
 
 		if (arrest) {
@@ -236,15 +241,6 @@
 		else {
 			$('.arrest-number-question').hide();
 			$('[name="arrest-number"]').prop('disabled', true);
-		}
-
-		if (arrest || blackout) {
-			$('.concerned-question').show();
-			$('[name="concern"]').prop('disabled', false);
-		}
-		else {
-			$('.concerned-question').hide();
-			$('[name="concern"]').prop('disabled', true);
 		}
 	}
 

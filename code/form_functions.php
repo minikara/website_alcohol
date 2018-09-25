@@ -27,18 +27,20 @@ function Concern ($arrest, $blackout){
 
 $concern = Concern ($_POST['arrest'], $_POST['blackout']);
 
-function PotentialProblems ($arrest, $blackout, $advise, $concern)
+function PotentialProblems ($arrest, $blackout, $concerned, $sex)
 {
-	if ($advise == "yes")
-		echo "A friend have already advise you to <strong>decrease your alcohol consumption</strong>. ";
         
-    if ($blackout == "yes")
-    	echo "You have suffer from <strong>" . $_POST['blackout-number'] . " blackouts</strong> this year. ";
+    if ($blackout = "once_semester" OR $blackout = "twice_semester" OR $blackout = "monthly" OR $blackout = "weekly")
+
+    	echo "You suffer from blackout <strong>" . $_POST['blackout'] . " </strong>. ";
     if ($arrest == "yes")
     	echo "You have already <strong>been arrest " . $_POST['arrest-number'] . "  times</strong> because of your alcohol consumption. ";
-    if ($concern == "yes") 
-    	echo "<strong>You are worried about your drinking.</strong> If you desire some help <strong>do not hesitate</strong> to contact one of the staff member of the university. Some of them that can <strong>help you</strong> <a href='https://ulsites.ul.ie/studentaffairs/student-health-centre-staff-medical-team' target='_blank'>here </a> or write at <a href='mailto: Ria.Toland@ul.ie' target='_blank'>this email</a>.";
-    if ($advise == "no" AND $blackout == "no" AND $arrest == "no") 
+    if ($concerned == "yes") 
+    	echo "<strong>You are worried about your drinking or a friend drinking.</strong> If you desire some help <strong>do not hesitate</strong> to contact one of the staff member of the university. Some of them that can <strong>help you</strong> <a href='https://ulsites.ul.ie/studentaffairs/student-health-centre-staff-medical-team' target='_blank'>here </a> or write at <a href='mailto: Ria.Toland@ul.ie' target='_blank'>this email</a>.";
+    if ($sex == "yes")
+    		echo "You have already had <strong>unprotected sex</strong> after excessive alcohol consumption";
+
+    if ($blackout == "never" AND $concerned == "no" AND $arrest == "no" AND $sex== "no") 
     	echo "You don't <strong>seem</strong> to have any dangerous behavior towards alcohol.";
 
 
@@ -51,7 +53,7 @@ function DifferenceToRecommendation ($quantityConssum, $Recommendation){
 
 $recommendation = Recommendation ($_POST['gender'], $womenRecommendation, $menRecommendation);
 $quantityConssum = CalculUnit ($_POST['pint'], $_POST['wine'], $_POST['Galcolpop'], $_POST['Balcolpop'], $_POST['sparWine'], $_POST['spirit'], $_POST['shot']);
-$lastQuestionsRecommendations = "If you have already had <strong>several blackouts</strong>, <strong>been arrested</strong> because of alcohol, or if a friend or health professional has already <strong>expressed concern</strong> about your drinking, then you may need to talk about your relationship with alcohol.";
+$lastQuestionsRecommendations = "If you have already had <strong>several blackouts</strong>, <strong>unprotexted sex</strong>, <strong>been arrested</strong> because of alcohol,or if a friend or health professional has already <strong>expressed concern</strong> about your drinking, then you may <strong>need to talk</strong> about your relationship with alcohol.";
 $unitsToRecommandation = DifferenceToRecommendation ($quantityConssum, $recommendation);
 
 
