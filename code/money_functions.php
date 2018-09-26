@@ -7,7 +7,7 @@ include ("config.php");
 // estimation of the money spend according to the value in the file config.php
 
 
-function EstimationMoneySpend ($pint, $wine, $glassOfAlcolpop, $bottleOfAlcopop, $sparklingWine, $spirit, $shot, $pricePint, $priceGlassOfWine, $priceGlassOfSparklingWine, $priceBottleOfAlcopop, $priceGlassOfAlcopop, $priceGlassOfSpirit, $priceShot, $can, $hWine, $buckfast, $naggin, $daddy350, $daddy700, $priceCans, $priceHomeGlasse, $priceBuckfastBottles, $priceNaggin, $priceDaddyNagginShoulder350, $priceDaddyNagginShoulder700);
+function EstimationMoneySpend ($pint, $wine, $glassOfAlcolpop, $bottleOfAlcopop, $sparklingWine, $spirit, $shot, $pricePint, $priceGlassOfWine, $priceGlassOfSparklingWine, $priceBottleOfAlcopop, $priceGlassOfAlcopop, $priceGlassOfSpirit, $priceShot, $can, $hWine, $buckfast, $naggin, $daddy350, $daddy700, $priceCans, $priceHomeGlasse, $priceBuckfastBottles, $priceNaggin, $priceDaddyNagginShoulder350, $priceDaddyNagginShoulder700)
 {
     return $pint * $pricePint + $wine * $priceGlassOfWine + $glassOfAlcolpop * $priceGlassOfAlcopop + $bottleOfAlcopop * $priceBottleOfAlcopop + $sparklingWine * $priceGlassOfSparklingWine + $spirit * $priceGlassOfSpirit + $shot * $priceShot + $can * $priceCans + $hWine * $priceHomeGlasse + $buckfast * $priceBuckfastBottles + $naggin * $priceNaggin + $daddy350 * $priceDaddyNagginShoulder350 + $daddy700 * $priceDaddyNagginShoulder700;
 
@@ -101,7 +101,7 @@ $quantitySave = MoneySave($spendPerMonth, $spendPerYear, $moneySaveIfRecommandat
 
 function AtLeastOne ($quantity)
 {
-	if ($quantity > 0)
+	if ($quantity >= 1)
 		return true;
 	elseif ($quantity == 0) 
 		return false;

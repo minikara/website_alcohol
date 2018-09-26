@@ -17,7 +17,7 @@
     $priceDaddyNagginShoulder700 = 16;
 
 
-    $prices = "Pint : € " . $pricePint . "<br />Glass of wine : € " . $priceGlassOfWine . "<br />Glass of Alcoholpop : € " . $priceGlassOfAlcopop . "<br />Bottle of Alcoholpop : € " . $priceBottleOfAlcopop . "<br />Glass of sparkling wine : € " . $priceGlassOfSparklingWine . "<br />Spirit : € " . $priceGlassOfSpirit ."<br />Shot : € " .$priceShot;
+    $prices = "<strong>In a bar/nightclub</strong> :<br />Pint : € " . $pricePint . "<br />Glass of wine : € " . $priceGlassOfWine . "<br />Glass of Alcoholpop : € " . $priceGlassOfAlcopop . "<br />Bottle of Alcoholpop : € " . $priceBottleOfAlcopop . "<br />Glass of sparkling wine : € " . $priceGlassOfSparklingWine . "<br />Spirit : € " . $priceGlassOfSpirit ."<br />Shot : € " .$priceShot . "<br /><strong> At Home</strong> :<br />sCan : € " . $priceCans . "<br />Glass of any wine : € " . $priceHomeGlasse . "<br />Buckfast Bottle : € " . $priceBuckfastBottles . "<br />Naggin : € " . $priceNaggin . "<br />Daddy Naggin/Shoulder 350ml : € " . $priceDaddyNagginShoulder350 ."<br />Daddy Naggin/Shoulder 700ml : € " .$priceDaddyNagginShoulder700;
 
 // units
 

@@ -16,7 +16,6 @@
 
 
 <!-- Estimation of the money spend in alcohol -->
-
 <?php include ("money_functions.php"); ?>
 
 

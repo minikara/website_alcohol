@@ -40,7 +40,7 @@ function Consumption ($consumption, $verif, $port, $maxcons, $mincons){
 	return $verif;
 }
 
-$consumption = array ('pint' => $_POST['pint'], 'wine'=> $_POST['wine'], 'Galcolpop' => $_POST['Galcolpop'], 'Balcolpop' => $_POST['Balcolpop'], 'sparwine' => $_POST['sparWine'], 'spirit' => $_POST['spirit'], 'shot' => $_POST['shot']);
+$consumption = array ('pint' => $_POST['pint'], 'wine'=> $_POST['wine'], 'Galcolpop' => $_POST['Galcolpop'], 'Balcolpop' => $_POST['Balcolpop'], 'sparwine' => $_POST['sparWine'], 'spirit' => $_POST['spirit'], 'shot' => $_POST['shot'], 'can' => $_POST['can'], 'hWine' => $_POST['hWine'], 'Buckfast' => $_POST['Buckfast'], 'naggin' => $_POST['naggin'], 'daddy350' => $_POST['daddy350'], 'daddy700' => $_POST['daddy700']);
 
 $validation['consumption'] = Consumption ($consumption, $verif, $port, $maxcons, $mincons);
 
@@ -133,7 +133,7 @@ $validation['arrest'] = Arrest ($_POST['arrest'], $verif, $port);
 $verif = true;
 function Sex ($sex, $verif, $port){
 
-	if ($sex != "yes" AND $arrest != "no") { ?>
+	if ($sex != "yes" AND $sex != "no") { ?>
 
 		<div class="alert alert-danger">
   		<strong>ATTENTION!</strong> You didn't well inquire the question about your possible unprotected sex <a href="<?php echo ($port) ?>" class="alert-link">go back to the formular</a>.
