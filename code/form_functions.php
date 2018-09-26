@@ -2,9 +2,9 @@
 
 include ("config.php");
 
-function CalculUnit ($pint, $wine, $Galcolpop, $Balcolpop, $sparkling_wine, $spirit, $shot) 
+function CalculUnit ($pint, $wine, $Galcolpop, $Balcolpop, $sparkling_wine, $spirit, $shot, $uPint, $uBalcolpop, $uGalcolpop, $can, $uCans, $hWine, $uHomeGlasse, $buckfast, $uBuckfastBottle, $naggin, $uNaggin, $daddy350, $uDaddyNagginShoulder350, $daddy700, $uDaddyNagginShoulder700) 
 {
-	$totalUnit = $pint * $uPint + $shot + $spirit + $sparkling_wine + $wine + $Balcolpop * $uBalcolpop + $uGalcolpop * $Galcolpop;
+	$totalUnit = $pint * $uPint + $shot + $spirit + $sparkling_wine + $wine + $Balcolpop * $uBalcolpop + $uGalcolpop * $Galcolpop + $uCans * $can + $uHomeGlasse * $hWine + $uBuckfastBottle * $buckfast + $uNaggin * $naggin + $uDaddyNagginShoulder350 * $daddy350 + $uDaddyNagginShoulder700 * $daddy700;
 	return $totalUnit; 
 }
 
@@ -52,7 +52,7 @@ function DifferenceToRecommendation ($quantityConssum, $Recommendation){
 }
 
 $recommendation = Recommendation ($_POST['gender'], $womenRecommendation, $menRecommendation);
-$quantityConssum = CalculUnit ($_POST['pint'], $_POST['wine'], $_POST['Galcolpop'], $_POST['Balcolpop'], $_POST['sparWine'], $_POST['spirit'], $_POST['shot']);
+$quantityConssum = CalculUnit ($_POST['pint'], $_POST['wine'], $_POST['Galcolpop'], $_POST['Balcolpop'], $_POST['sparWine'], $_POST['spirit'], $_POST['shot'], $uPint, $uBalcolpop, $uGalcolpop, $_POST['can'], $uCans, $_POST['hWine'], $uHomeGlasse, $_POST['Buckfast'], $uBuckfastBottle, $_POST['naggin'], $uNaggin, $_POST['daddy350'], $uDaddyNagginShoulder350, $_POST['daddy700'] , $uDaddyNagginShoulder700);
 $lastQuestionsRecommendations = "If you have already had <strong>several blackouts</strong>, <strong>unprotexted sex</strong>, <strong>been arrested</strong> because of alcohol,or if a friend or health professional has already <strong>expressed concern</strong> about your drinking, then you may <strong>need to talk</strong> about your relationship with alcohol.";
 $unitsToRecommandation = DifferenceToRecommendation ($quantityConssum, $recommendation);
 
