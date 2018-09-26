@@ -4,7 +4,7 @@ include ("config.php");
 
 function CalculUnit ($pint, $wine, $Galcolpop, $Balcolpop, $sparkling_wine, $spirit, $shot) 
 {
-	$totalUnit = $pint * 2 + $shot + $spirit + $sparkling_wine + $wine + $Balcolpop * 2 + 0.5 * $Galcolpop ;
+	$totalUnit = $pint * $uPint + $shot + $spirit + $sparkling_wine + $wine + $Balcolpop * $uBalcolpop + $uGalcolpop * $Galcolpop;
 	return $totalUnit; 
 }
 

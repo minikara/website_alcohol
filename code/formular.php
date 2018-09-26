@@ -28,7 +28,9 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<legend>On a typical week, how many days would you consume alcohol ?</legend>
+					<h2>In a typical week, what do you drink?</h2>
+					<div class="form-group">
+					<legend>In a bar/night club :</legend>
 					<div class="row">
 						<div class="form-group col-lg-2">	
 						<label for="pint"> A pint : </label>
@@ -103,6 +105,74 @@
   							</div>
 						</div>
 						</div>
+					</div>
+					<div class="form-group">
+					<legend>At home :</legend>
+					<div class="row">
+						<div class="form-group col-lg-2">	
+						<label for="pint"> A can : </label>
+						<div class="input-group">
+							<input class="form-control" type="number" name="can" value="0" min=<?php echo $mincons ?> max=<?php echo $maxcons ?> class="quantity"/>
+							<div class="input-group-append">
+    							<span class="input-group-text">times</span>
+  							</div>
+						</div>
+						</div>
+						
+						<div class="form-group col-lg-2">
+						<label for="wine"> A glass of any wine : </label>
+						<div class="input-group">
+							<input class="form-control" type="number" name="hWine" value="0" min=<?php echo $mincons ?> max=<?php echo $maxcons ?> class="quantity"/>
+							<div class="input-group-append">
+    							<span class="input-group-text">times</span>
+  							</div>
+						</div>
+						</div>
+						
+						<div class="form-group col-lg-2">
+						<label for="Galcolpop"> A bottle of Buckfast : </label>
+						<div class="input-group">
+							<input class="form-control" type="number" name="Buckfast" value="0" min=<?php echo $mincons ?> max=<?php echo $maxcons ?> class="quantity"/>
+							<div class="input-group-append">
+    							<span class="input-group-text">times</span>
+  							</div>
+						</div>
+						</div>
+
+						<div class="form-group col-lg-2">
+						<label for="shot"> A naggin (200ml) : </label>
+						<div class="input-group">
+							<input class="form-control" type="number" name="naggin" value="0" class="quantity" min=<?php echo $mincons ?> max=<?php echo $maxcons ?> />
+							<div class="input-group-append">
+    							<span class="input-group-text">times</span>
+  							</div>
+						</div>
+						</div>
+						
+						
+					</div>
+					<div class="row">
+						
+						<div class="form-group col-lg-2">
+						<label for="sparWine"> A daddy naggin/shoulder (350ml) : </label>
+						<div class="input-group">
+							<input class="form-control" type="number" name="daddy350" value="0" min=<?php echo $mincons ?> max=<?php echo $maxcons ?> class="quantity"/>
+							<div class="input-group-append">
+    							<span class="input-group-text">times</span>
+  							</div>
+						</div>
+						</div>
+						
+						<div class="form-group col-lg-2">
+						<label for="spirit"> A daddy naggin/shoulder bottle (700ml) : </label>
+						<div class="input-group">
+							<input class="form-control" type="number" name="daddy700" value="0" min=<?php echo $mincons ?> max=<?php echo $maxcons ?> class="quantity"/>
+							<div class="input-group-append">
+    							<span class="input-group-text">times</span>
+  							</div>
+						</div>
+						</div>
+					</div>
 					</div>
 					<button type="button" class="btn btn-outline-primary" data-container="body" data-toggle="popover" data-placement="right"
 					data-html="true"

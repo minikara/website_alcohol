@@ -9,8 +9,29 @@
     $priceGlassOfAlcopop = 2.5;
     $priceGlassOfSpirit = 6;
     $priceShot = 2.5;
+    $priceCans = 2;
+    $priceHomeGlasse =1.5;
+    $priceBuckfastBottles = 15;
+    $priceNaggin = 7;
+    $priceDaddyNagginShoulder350 = 12;
+    $priceDaddyNagginShoulder700 = 16;
+
 
     $prices = "Pint : € " . $pricePint . "<br />Glass of wine : € " . $priceGlassOfWine . "<br />Glass of Alcoholpop : € " . $priceGlassOfAlcopop . "<br />Bottle of Alcoholpop : € " . $priceBottleOfAlcopop . "<br />Glass of sparkling wine : € " . $priceGlassOfSparklingWine . "<br />Spirit : € " . $priceGlassOfSpirit ."<br />Shot : € " .$priceShot;
+
+// units
+
+    $uPint = 2;
+    $uBalcolpop = 2;
+    $uGalcolpop =0.5;
+    $uCans = 2.1;
+    $uHomeGlasse = 1.7;
+    $uBuckfastBottle = 11.5;
+    $uNaggin = 8;
+    $uDaddyNagginShoulder350 = 14;
+    $uDaddyNagginShoulder700 = 28;
+
+
 
 
 // consumption of alcohol
