@@ -5,7 +5,7 @@
 
 <p>
 <?php
-    if ($quantityConssum > 0 AND AtLeastOne ($moneySaveIfRecommandation['month']/ $goodlunch) == false ){ ?>
+    if ($quantityConssum > 0 AND AtLeastOne ($spendPerMonth/ $goodlunch) == true AND AtLeastOne ($quantitySave['to_rec']['clothes']['month']) == false){ ?>
    
         It is still at least <strong><?php echo (int)($moneySaveIfRecommandation['month'] / $goodlunch)?> good lunch(s)</strong> that you could take in a pub during the month !
     <?php } ?>

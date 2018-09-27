@@ -18,14 +18,6 @@ else
 	return 'No gender';
 }
 
-function Concern ($arrest, $blackout){
-	if ($arrest == "yes" OR $blackout == "yes")
-		return $_POST['concern'];
-	else 
-		return "no";
-}
-
-$concern = Concern ($_POST['arrest'], $_POST['blackout']);
 
 function PotentialProblems ($arrest, $blackout, $concerned, $sex)
 {
